@@ -61,7 +61,6 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 - **Vision-Based Safety Securing Technology for Temporary Structure Installation and Dismantlement** (May 2024 – Present)  
   *The Korea Agency for Infrastructure Technology and Advancement, Korea*  
-  *Project Manager*  
   Creating object detection datasets for PPE (Personal Protective Equipment) to enhance safety compliance
 
 - **Development of Intelligent CCTV-AI-Based Construction Site Video Analysis Technology** (May 2024 – Present)  
@@ -96,7 +95,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 ## Awards & Honors
 
 - **Academic Excellence Scholarship**, Dongguk Univ. (2020, 2021, 2023)
-- **Summa Cum Laude**, Dongguk Univ. Film Program (2024)
+- **Summa Cum Laude**, Dongguk Univ. (2024)
 - **Video Contest Award**, Cultural Heritage Administration (2020)
 - **Jongno-gu Scholarship Foundation Scholarship** (2025)
 

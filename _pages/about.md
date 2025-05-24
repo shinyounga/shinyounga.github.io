@@ -100,7 +100,6 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - **Video Contest Award**, Cultural Heritage Administration (2020)
 - **Jongno-gu Scholarship Foundation Scholarship** (2025)
 
-
 <details>
 <summary><strong>📁 Supporting Documents</strong></summary>
 
@@ -123,4 +122,5 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - [TOEIC Speaking Official Score Certificate](/files/TOEIC%20Speaking%20Test%20Official%20Score%20Certificate%20(토익%20스피킹%20성적표).pdf)
 
 </details>
+
 

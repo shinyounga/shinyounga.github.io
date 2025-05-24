@@ -99,6 +99,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - **Video Contest Award**, Cultural Heritage Administration (2020)
 - **Jongno-gu Scholarship Foundation Scholarship** (2025)
 
+  
 <details>
 <summary><strong>📁 Supporting Documents</strong></summary>
 
@@ -106,22 +107,23 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 ### Academic Records
 
-- [Bachelor’s Certificate of Graduation](/files/Bachelor’s%20Certificate%20of%20Graduation%20(학부%20졸업%20증명서).pdf)  
-- [Undergraduate Academic Transcript](/files/Undergraduate%20Academic%20Transcript%20(학부%20성적%20증명서).pdf)  
-- [Certificate of Undergraduate Achievement](/files/Certificate%20of%20Undergraduate%20Achievement%20(학부%20수상%20확인서).pdf)  
-- [Certificate of Undergraduate Scholarship Award](/files/Certificate%20of%20Undergraduate%20Scholarship%20Award%20(학부%20장학금%20수혜%20확인서).pdf)
+- [Bachelor’s Certificate of Graduation](/files/bachelors_certificate_of_graduation.pdf)  
+- [Undergraduate Academic Transcript](/files/undergraduate_academic_transcript.pdf)  
+- [Certificate of Undergraduate Achievement](/files/undergraduate_achievement_certificate.pdf)  
+- [Certificate of Undergraduate Scholarship Award](/files/undergraduate_scholarship_certificate.pdf)
 
 ### Certifications & Qualifications
 
-- [Engineer Surveying Geo-Spatial Information](/files/Engineer%20Surveying%20Geo-Spatial%20Information%20(측량및지형공간정보기사).pdf)  
-- [Engineer Cadastral Surveying](/files/Engineer%20Cadastral%20Surveying%20(지적기사).pdf)  
-- [Computer Specialist in Spreadsheet & Database Level-1](/files/Computer%20Specialist%20in%20Spreadsheet%20&%20Database%20Level-1%20(컴퓨터활용능력%201급).pdf)  
-- [Korean History Proficiency Test – Level 1](/files/Korean%20History%20Proficiency%20Test%20-%20Level%201%20(한국사능력검정시험%201급).pdf)
+- [Engineer Surveying Geo-Spatial Information](/files/engineer_surveying_geospatial_info.pdf)  
+- [Engineer Cadastral Surveying](/files/engineer_cadastral_surveying.pdf)  
+- [Engineer Information Processing](/files/engineer_information_processing.pdf)  
+- [Computer Specialist in Spreadsheet & Database Level-1](/files/computer_specialist_spreadsheet_database.pdf)  
+- [Korean History Proficiency Test – Level 1](/files/korean_history_level1.pdf)
 
 ### Language
 
-- [TOEIC Official Score Certificate](/files/TOEIC%20Official%20Score%20Certificate%20(토익%20공식%20성적표).pdf)  
-- [TOEIC Speaking Official Score Certificate](/files/TOEIC%20Speaking%20Test%20Official%20Score%20Certificate%20(토익%20스피킹%20성적표).pdf)
+- [TOEIC Official Score Certificate](/files/toeic_score_certificate.pdf)  
+- [TOEIC Speaking Official Score Certificate](/files/toeic_speaking_score_certificate.pdf)
 
 </details>
 

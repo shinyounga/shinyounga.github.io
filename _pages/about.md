@@ -19,10 +19,10 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 ## Skills & Technologies
 
-🐍 **Python** &nbsp;&nbsp;&nbsp; 🔥 **PyTorch / TensorFlow** &nbsp;&nbsp;&nbsp; 🐳 **Docker**  
+🐍 **Python** &nbsp;&nbsp;&nbsp; 🔥 **PyTorch &nbsp;&nbsp;&nbsp; 🐳 **Docker**  
 📦 **OpenCV / Pandas / NumPy** &nbsp;&nbsp;&nbsp; 📊 **Matplotlib / Seaborn**  
 🏗️ **BIM (Revit + Dynamo)** &nbsp;&nbsp;&nbsp; 🌐 **Git / GitHub / VS Code**  
-🖼️ **Adobe Photoshop / Adobe Illustrator** &nbsp;&nbsp;&nbsp; 🎥 **Final Cut Pro / Adobe Premiere Pro**   
+🖼️ **Adobe Photoshop /  Illustrator** &nbsp;&nbsp;&nbsp; 🎥 **Final Cut Pro / Adobe Premiere Pro**   
 
 
 ## Education
@@ -70,7 +70,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
   Producing technical demonstration and promotional videos for AI model validation and stakeholder presentation
 
 
-## 🎥 Media Production Experience
+## Media Production Experience
 
 - **Videographing PD**, *SBS NEWS – SUBUSU NEWS (1.23M subscribers)*, Korea (Jul. 2021 – Feb. 2024)  
   Planned and executed visual sequences for news features, managing camera, lighting, and sound in collaboration with editorial teams.

@@ -86,6 +86,14 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - **Engineer Information Processing** (2024.06)
 - **Computer Specialist in Spreadsheet & Database Level-1** (2022.03)
 - **Korean History Proficiency Test – Level 1** (2024.06)
+- 
+### 📑 Official Certifications
+- 💻 [Computer Specialist in Spreadsheet & Database Level-1](/files/Computer Specialist in Spreadsheet & Database Level-1 (컴퓨터활용능력 1급).pdf)
+- 📐 [Engineer Cadastral Surveying](/files/Engineer Cadastral Surveying (지적기사).pdf)
+- 🧭 [Engineer Surveying Geo-Spatial Information](/files/Engineer Surveying Geo-Spatial Information (측량및지형공간정보기사).pdf)
+- 🏛️ [Korean History Proficiency Test – Level 1](/files/Korean History Proficiency Test - Level 1 (한국사능력검정시험 1급).pdf)
+
+
 
 ## Language
 

@@ -19,11 +19,14 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 ## Skills & Technologies
 
-🐍 **Python** &nbsp;&nbsp;&nbsp; 🔥 **PyTorch** &nbsp;&nbsp;&nbsp; 🐳 **Docker**  
-📦 **OpenCV / Pandas / NumPy** &nbsp;&nbsp;&nbsp; 📊 **Matplotlib / Seaborn**  
-🏗️ **BIM (Revit + Dynamo)** &nbsp;&nbsp;&nbsp; 🌐 **Git / GitHub / VS Code**  
-🖼️ **Adobe Photoshop /  Illustrator** &nbsp;&nbsp;&nbsp; 🎥 **Final Cut Pro / Adobe Premiere Pro**   
+🧠 **Programming & AI**
+- 🐍 Python, 🔥 PyTorch, 🐳 Docker
 
+🏗️ **BIM & Design**
+- 🏗️ Revit, 🖼️ Adobe Photoshop, Adobe Illustrator
+
+🎥 **Video Editing**
+- 🎞️ Final Cut Pro, Adobe Premiere Pro
 
 ## Education
 

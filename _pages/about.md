@@ -72,15 +72,6 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
   Producing technical demonstration and promotional videos for AI model validation and stakeholder presentation
 
 
-## Media Production Experience
-
-- **Videographing PD**, *SBS NEWS – SUBUSU NEWS (1.23M subscribers)*, Korea (Jul. 2021 – Feb. 2024)  
-  Planned and executed visual sequences for news features, managing camera, lighting, and sound in collaboration with editorial teams.
-- Filmed and edited **40+ short films** as assistant director, cinematographer, and post-production editor
-- Taught youth how to produce **barrier-free films** through a 2-year **volunteer media education program**
-- Skilled in **visual storytelling, branding, and multicultural communication**
-
-
 ## Certifications & Qualifications
 
 - **Engineer Surveying Geo-Spatial Information** (2022.12)
@@ -94,6 +85,15 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 - **English**: TOEIC 925 (LC 460, RC 465), TOEIC Speaking: Advanced Low  
 - **French**: Basic conversational proficiency
+
+
+## Media Production Experience
+
+- **Videographing PD**, *SBS NEWS – SUBUSU NEWS (1.23M subscribers)*, Korea (Jul. 2021 – Feb. 2024)  
+  Planned and executed visual sequences for news features, managing camera, lighting, and sound in collaboration with editorial teams.
+- Filmed and edited **40+ short films** as assistant director, cinematographer, and post-production editor
+- Taught youth how to produce **barrier-free films** through a 2-year **volunteer media education program**
+- Skilled in **visual storytelling, branding, and multicultural communication**
 
 ## Awards & Honors
 

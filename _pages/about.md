@@ -100,31 +100,29 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - **Jongno-gu Scholarship Foundation Scholarship** (2025)
 
   
-<details>
-<summary><strong>📁 Supporting Documents</strong></summary>
-
-<br>
+<details markdown="1">
+<summary>📁 Supporting Documents</summary>
 
 ### Academic Records
 
-- [Bachelor’s Certificate of Graduation](/files/bachelors_certificate_of_graduation.pdf)  
-- [Undergraduate Academic Transcript](/files/undergraduate_academic_transcript.pdf)  
-- [Certificate of Undergraduate Achievement](/files/undergraduate_achievement_certificate.pdf)  
+- [Bachelor’s Certificate of Graduation](/files/bachelors_certificate_of_graduation.pdf)
+- [Undergraduate Academic Transcript](/files/undergraduate_academic_transcript.pdf)
+- [Certificate of Undergraduate Achievement](/files/undergraduate_achievement_certificate.pdf)
 - [Certificate of Undergraduate Scholarship Award](/files/undergraduate_scholarship_certificate.pdf)
 
 ### Certifications & Qualifications
 
-- [Engineer Surveying Geo-Spatial Information](/files/engineer_surveying_geospatial_info.pdf)  
-- [Engineer Cadastral Surveying](/files/engineer_cadastral_surveying.pdf)  
-- [Engineer Information Processing](/files/engineer_information_processing.pdf)  
-- [Computer Specialist in Spreadsheet & Database Level-1](/files/computer_specialist_spreadsheet_database.pdf)  
+- [Engineer Surveying Geo-Spatial Information](/files/engineer_surveying_geospatial_info.pdf)
+- [Engineer Cadastral Surveying](/files/engineer_cadastral_surveying.pdf)
+- [Engineer Information Processing](/files/engineer_information_processing.pdf)
+- [Computer Specialist in Spreadsheet & Database Level-1](/files/computer_specialist_spreadsheet_database.pdf)
 - [Korean History Proficiency Test – Level 1](/files/korean_history_level1.pdf)
 
 ### Language
 
-- [TOEIC Official Score Certificate](/files/toeic_score_certificate.pdf)  
+- [TOEIC Official Score Certificate](/files/toeic_score_certificate.pdf)
 - [TOEIC Speaking Official Score Certificate](/files/toeic_speaking_score_certificate.pdf)
-
 </details>
+
 
 

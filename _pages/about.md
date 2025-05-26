@@ -76,9 +76,9 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 - **Videographing PD**, *SBS NEWS – SUBUSU NEWS (1.23M subscribers)*, Korea (Jul. 2021 – Feb. 2024)  
   Planned and executed visual sequences for news features, managing camera, lighting, and sound in collaboration with editorial teams.
-- Filmed and edited 40+ short films as assistant director, cinematographer, and post-production editor
-- Taught youth how to produce barrier-free films through a 2-year volunteer media education program
-- Skilled in visual storytelling, branding, and multicultural communication
+- Filmed and edited **40+ short films** as assistant director, cinematographer, and post-production editor
+- Taught youth how to produce **barrier-free films** through a 2-year **volunteer media education program**
+- Skilled in **visual storytelling, branding, and multicultural communication**
 
 
 ## Certifications & Qualifications

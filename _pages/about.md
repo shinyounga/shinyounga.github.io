@@ -72,7 +72,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
   Producing technical demonstration and promotional videos for AI model validation and stakeholder presentation
 
 
-## Certifications & Qualifications
+## Certifications
 
 - **Engineer Information Processing** (2024.06)
 - **Engineer Surveying Geo-Spatial Information** (2022.12)

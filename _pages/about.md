@@ -63,8 +63,8 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
   Developing AI-driven systems for real-time levee failure monitoring and early warning
 
 - **Vision-Based Safety Securing Technology for Temporary Structure Installation and Dismantlement** (May 2024 – Present)  
-  *The Korea Agency for Infrastructure Technology and Advancement, Korea*  
-  Creating object detection datasets for PPE (Personal Protective Equipment) to enhance safety compliance
+  *The Korea Agency for Infrastructure Technology and Advancement, Korea*
+  Development a dataset for object detection for PPE (Personal Protective Equipment)
 
 - **Development of Intelligent CCTV-AI-Based Construction Site Video Analysis Technology** (May 2024 – Present)  
   *Kumho Engineering & Construction, Korea*  
@@ -74,9 +74,9 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 ## Certifications & Qualifications
 
+- **Engineer Information Processing** (2024.06)
 - **Engineer Surveying Geo-Spatial Information** (2022.12)
 - **Engineer Cadastral Surveying** (2023.09)
-- **Engineer Information Processing** (2024.06)
 - **Computer Specialist in Spreadsheet & Database Level-1** (2022.03)
 - **Korean History Proficiency Test – Level 1** (2024.06)
 

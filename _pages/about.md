@@ -95,13 +95,6 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - Taught youth how to produce **barrier-free films** through a 2-year **volunteer media education program**
 - Skilled in **visual storytelling, branding, and multicultural communication**
 
-## Awards & Honors
-
-- **Academic Excellence Scholarship**, Dongguk Univ. (2020, 2021, 2023)
-- **Summa Cum Laude**, Dongguk Univ. (2024)
-- **Video Contest Award**, Cultural Heritage Administration (2020)
-- **Jongno-gu Scholarship Foundation Scholarship** (2025)
-
 
 ## Awards & Honors
 

@@ -106,30 +106,26 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - **Work Scholarship** (Student Council), Dongguk University, Korea (Sep. 2020)  
 - **Academic Excellence Scholarship** (top academic achievement in class; Aesthetics of Film), Dongguk University, Korea (Mar. 2020)
 
-
 <details markdown="1">
 <summary>📁 Supporting Documents</summary>
 
 ### Academic Records
 
-- [Bachelor’s Certificate of Graduation](/files/bachelors_certificate_of_graduation.pdf)
-- [Undergraduate Academic Transcript](/files/undergraduate_academic_transcript.pdf)
-- [Certificate of Undergraduate Achievement](/files/undergraduate_achievement_certificate.pdf)
-- [Certificate of Undergraduate Scholarship Award](/files/undergraduate_scholarship_certificate.pdf)
+- [Bachelor’s Certificate of Graduation](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/f30e17ad5ed9f01e9947cbf8ba9ec25bf59a0960/files/bachelors_certificate_graduation.pdf)
+- [Undergraduate Academic Transcript](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/undergraduate_academic_transcript.pdf)
+- [Certificate of Undergraduate Achievement](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/undergraduate_achievement_certificate.pdf)
+- [Certificate of Undergraduate Scholarship Award](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/undergraduate_scholarship_certificate.pdf)
 
 ### Certifications & Qualifications
 
-- [Engineer Surveying Geo-Spatial Information](/files/engineer_surveying_geospatial_info.pdf)
-- [Engineer Cadastral Surveying](/files/engineer_cadastral_surveying.pdf)
-- [Engineer Information Processing](/files/engineer_information_processing.pdf)
-- [Computer Specialist in Spreadsheet & Database Level-1](/files/computer_specialist_spreadsheet_database.pdf)
-- [Korean History Proficiency Test – Level 1](/files/korean_history_level1.pdf)
+- [Engineer Surveying Geo-Spatial Information](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/engineer_surveying_geospatial_info.pdf)
+- [Engineer Cadastral Surveying](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/engineer_cadastral_surveying.pdf)
+- [Engineer Information Processing](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/engineer_information_processing.pdf)
+- [Computer Specialist in Spreadsheet & Database Level-1](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/computer_specialist_spreadsheet_database.pdf)
+- [Korean History Proficiency Test – Level 1](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/korean_history_level1.pdf)
 
 ### Language
 
-- [TOEIC Official Score Certificate](/files/toeic_score_certificate.pdf)
-- [TOEIC Speaking Official Score Certificate](/files/toeic_speaking_score_certificate.pdf)
+- [TOEIC Official Score Certificate](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/toeic_score_certificate.pdf)
+- [TOEIC Speaking Official Score Certificate](https://raw.githubusercontent.com/shinyounga/shinyounga.github.io/BRANCH_NAME/files/toeic_speaking_score_certificate.pdf)
 </details>
-
-
-

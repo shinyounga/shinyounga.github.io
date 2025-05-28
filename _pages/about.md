@@ -102,7 +102,18 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 - **Video Contest Award**, Cultural Heritage Administration (2020)
 - **Jongno-gu Scholarship Foundation Scholarship** (2025)
 
-  
+
+## Awards & Honors
+
+- **Jongno-gu Scholarship Foundation Scholarship**, Jongno-gu Scholarship Foundation, Korea (Feb. 2025)
+- **Academic Excellence Scholarship**, Dongguk University, Korea (Sep. 2023)  
+- **Academic Excellence Scholarship**, Dongguk University, Korea (Mar. 2023)  
+- **Academic Excellence Scholarship**, Dongguk University, Korea (Mar. 2021)  
+- **2020 Cultural Heritage Channel Video Contest Idea Bank Award Winner**, Cultural Heritage Administration, Korea (Nov. 2020)  
+- **Work Scholarship** (Student Council), Dongguk University, Korea (Sep. 2020)  
+- **Academic Excellence Scholarship** (top academic achievement in class; Aesthetics of Film), Dongguk University, Korea (Mar. 2020)
+
+
 <details markdown="1">
 <summary>📁 Supporting Documents</summary>
 

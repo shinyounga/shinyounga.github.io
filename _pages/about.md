@@ -22,7 +22,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 🧠 **Programming & AI**
 - 🐍 Python, 🔥 PyTorch, 🐳 Docker
 
-🏗️ **BIM & Design**
+🖌️ **BIM & Design**
 - 🏗️ Revit, 🖼️ Adobe Photoshop, Adobe Illustrator
 
 🎥 **Video Editing**

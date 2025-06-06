@@ -35,7 +35,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
   Advisor: Prof. Hongjo Kim  
   GPA: 4.22/4.3
 
-- **B.S. in Film and Digital Media** (March 2013 - February 2019)  
+- **B.S. in Film and Digital Media** (March 2019 - August 2024)  
   Dongguk University, Seoul, Korea
   Advisor: Prof. Jongho Park
   GPA: 4.22/4.5

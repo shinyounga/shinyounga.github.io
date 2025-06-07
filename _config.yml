@@ -49,7 +49,8 @@ author:
   # Social media
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/younga-shin/"
+  linkedin         : "<div class="badge-base LI-profile-badge" data-locale="ko_KR" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="younga-shin" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://kr.linkedin.com/in/younga-shin?trk=profile-badge">Younga Shin</a></div>
+              "
   youtube          : # Username
 
 # Publication Category - The following the list of publication categories and their headings

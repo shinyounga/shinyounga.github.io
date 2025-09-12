@@ -10,12 +10,14 @@ redirect_from:
 
 ## About Me
 
-I am a Master student in the Smart Infrastructure Laboratory at Yonsei University, advised by Professor Hongjo Kim. My research focuses on applying artificial intelligence and deep learning to construction engineering challenges, with particular interests in:
+I am a Master student in the Smart Infrastructure Laboratory at Yonsei University, advised by Professor Hongjo Kim.  
+My research focuses on applying artificial intelligence and deep learning to construction engineering challenges, with particular interests in:
 
-- AI-based sensing platforms for levee failure prediction  
-- Water level prediction models for ungauged basins
+- AI-based health management frameworks for construction workers
+- Water level prediction models for ungauged basins  
 - Retrieval-Augmented Generation (RAG) in construction domain  
-- Object detection and segmentation of PPE in construction site images
+- Object detection and segmentation of PPE in construction site images  
+
 
 ## Skills & Technologies
 
@@ -99,6 +101,7 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 
 ## Awards & Honors
 
+- **Jongno-gu Scholarship Foundation Scholarship (Academic Excellence)**, Jongno-gu Scholarship Foundation, Korea (Sep. 2025)
 - **Jongno-gu Scholarship Foundation Scholarship**, Jongno-gu Scholarship Foundation, Korea (Feb. 2025)
 - **Academic Excellence Scholarship**, Dongguk University, Korea (Sep. 2023)  
 - **Academic Excellence Scholarship**, Dongguk University, Korea (Mar. 2023)  

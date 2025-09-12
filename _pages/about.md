@@ -52,7 +52,24 @@ I am a Master student in the Smart Infrastructure Laboratory at Yonsei Universit
 ## Conference Presentations
 
 1. **Shin, Y**., Kim, H. "2024 Annual Academic Conference", Korea Institute of Construction Engineering and Management, Jeju, Korea (November 2024) – Poster Presentation
+Shin, Y., & Kim, H. (2024). [P-008] Sensor Network-Based Monitoring Research Trends for Levee Failure Risk Assessment. Proceedings of the Korea Institute of Construction Engineering and Management Conference, 134–135.
+
 2. **Shin, Y**., Choi, K., Kim, Y., Kim, H. "Creative Construction Conference (CCC 2025)", Zadar, Croatia (June 2025) – Oral Presentation
+**Shin, Y.**, Choi, K., Kim, Y., & Kim, H. (2025). Comparative Analysis of Short-Term Water Level Forecasting in Ungauged River Systems. Proceedings of the Creative Construction Conference (CCC 2025), Zadar, Croatia, pp. 416–424. https://doi.org/10.22260/CCC2025/0050
+
+
+## Conference Presentations
+
+1. **Shin, Y.**, Kim, H.  
+   *2024 Annual Academic Conference*, Korea Institute of Construction Engineering and Management, Jeju, Korea (Nov 2024) – Poster Presentation  
+   *[P-008] Sensor Network-Based Monitoring Research Trends for Levee Failure Risk Assessment*.  
+   *Proceedings of the KICEM Conference*, pp. 134–135.  
+
+2. **Shin, Y.**, Choi, K., Kim, Y., Kim, H.  
+   *Creative Construction Conference (CCC 2025)*, Zadar, Croatia (Jun 2025) – Oral Presentation  
+   *Comparative Analysis of Short-Term Water Level Forecasting in Ungauged River Systems*.  
+   *Proceedings of the Creative Construction Conference (CCC 2025)*, pp. 416–424.  
+   [https://doi.org/10.22260/CCC2025/0050](https://doi.org/10.22260/CCC2025/0050)
 
 
 ## Projects

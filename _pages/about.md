@@ -55,8 +55,7 @@ My research focuses on applying artificial intelligence and deep learning to con
 
 1. **Shin, Y.**, & Kim, H. (2024). Sensor Network-Based Monitoring Research Trends for Levee Failure Risk Assessment. Proceedings of the Korea Institute of Construction Engineering and Management Conference, Jeju, South Korea, pp. 134–135.
 
-2. **Shin, Y.**, Choi, K., Kim, Y., & Kim, H. (2025). Comparative Analysis of Short-Term Water Level Forecasting in Ungauged River Systems. Proceedings of the Creative Construction Conference (CCC 2025), Zadar, Croatia, pp. 416–424. https://doi.org/10.22260/CCC2025/0050
-
+2. **Shin, Y.**, Choi, K., Kim, Y., & Kim, H. (2025). *Comparative Analysis of Short-Term Water Level Forecasting in Ungauged River Systems*. Proceedings of the Creative Construction Conference (CCC 2025), Zadar, Croatia, pp. 416–424. [https://doi.org/10.22260/CCC2025/0050](https://doi.org/10.22260/CCC2025/0050)
 
 ## Projects
 

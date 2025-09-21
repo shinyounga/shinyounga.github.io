@@ -32,12 +32,12 @@ My research focuses on applying artificial intelligence and deep learning to con
 
 ## Education
 
-- **Master in Civil and Environmental Engineering** (Sep 2024 - Present)  
+- **M.S. in Civil and Environmental Engineering** (Sep 2024 - Present)  
   Yonsei University, Seoul, Korea  
   Advisor: Prof. Hongjo Kim  
   GPA: 4.22/4.3
 
-- **B.S. in Film and Digital Media** (March 2019 - August 2024)  
+- **B.A. in Film and Digital Media** (March 2019 - August 2024)  
   Dongguk University, Seoul, Korea
   Advisor: Prof. Jongho Park
   GPA: 4.22/4.5

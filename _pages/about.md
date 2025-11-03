@@ -61,7 +61,6 @@ My research focuses on applying artificial intelligence and deep learning to con
 
 - **Autonomous Evolutionary AI-Based Smart Sensing Platform for Early Detection and Proactive Response to Levee Failures** (Aug. 2024 – Present)  
   *National Research Foundation of Korea, Korea*  
-  *Project Manager*  
   Developing AI-driven systems for real-time levee failure monitoring and early warning
 
 - **Vision-Based Safety Securing Technology for Temporary Structure Installation and Dismantlement** (May 2024 – Present)  
@@ -70,7 +69,6 @@ My research focuses on applying artificial intelligence and deep learning to con
 
 - **Development of Intelligent CCTV-AI-Based Construction Site Video Analysis Technology** (May 2024 – Present)  
   *Kumho Engineering & Construction, Korea*  
-  *Video Editor & Content Creator*  
   Producing technical demonstration and promotional videos for AI model validation and stakeholder presentation
 
 

@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filmography | Younga Shin</title>
+<meta name="description" content="Filmography of Younga Shin (신영아) — 30+ short films, commercials, and barrier-free productions.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" rel="stylesheet">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===== CSS Custom Properties ===== */
+:root {
+  --font-heading: 'Poppins', 'Pretendard', sans-serif;
+  --font-body: 'Pretendard', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #eef1f5;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a68;
+  --text-muted: #7a7a96;
+  --accent: #16697a;
+  --accent-light: #e8f4f7;
+  --accent-hover: #124f5c;
+  --border: #e2e6ec;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --selection-bg: #16697a;
+  --selection-text: #ffffff;
+  --tag-festival-bg: #fff3e0;
+  --tag-festival-text: #e65100;
+  --tag-award-bg: #fce4ec;
+  --tag-award-text: #c62828;
+  --tag-support-bg: #e8f5e9;
+  --tag-support-text: #2e7d32;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #1c2333;
+  --bg-card: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #b1bac4;
+  --text-muted: #7d8590;
+  --accent: #58a6b8;
+  --accent-light: #162830;
+  --accent-hover: #7fc4d4;
+  --border: #30363d;
+  --shadow: rgba(0, 0, 0, 0.25);
+  --shadow-md: rgba(0, 0, 0, 0.35);
+  --nav-bg: rgba(13, 17, 23, 0.92);
+  --selection-bg: #58a6b8;
+  --selection-text: #0d1117;
+  --tag-festival-bg: #2a1f00;
+  --tag-festival-text: #ffb74d;
+  --tag-award-bg: #2a0a0a;
+  --tag-award-text: #ef9a9a;
+  --tag-support-bg: #0a2a0a;
+  --tag-support-text: #81c784;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.nav-back {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-back:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.nav-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* ===== Page Header ===== */
+.page-header {
+  padding: 64px 0 32px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 24px auto 0;
+}
+
+/* ===== Filter Tabs ===== */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 24px 0 40px;
+}
+
+.filter-tab {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+.filter-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ===== Film List ===== */
+.film-list {
+  padding-bottom: 80px;
+}
+
+.year-group {
+  margin-bottom: 40px;
+}
+
+.year-label {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.year-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+
+.film-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+.film-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.film-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.film-title-group {
+  flex: 1;
+}
+
+.film-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: inline;
+}
+
+.film-role {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.film-category-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cat-short { background: #e3f2fd; color: #1565c0; }
+.cat-commercial { background: #f3e5f5; color: #7b1fa2; }
+.cat-barrier { background: #e8f5e9; color: #2e7d32; }
+
+[data-theme="dark"] .cat-short { background: #0a1a2a; color: #64b5f6; }
+[data-theme="dark"] .cat-commercial { background: #1a0a2a; color: #ce93d8; }
+[data-theme="dark"] .cat-barrier { background: #0a2a0a; color: #81c784; }
+
+.film-details {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.film-badge {
+  font-size: 0.73rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-festival {
+  background: var(--tag-festival-bg);
+  color: var(--tag-festival-text);
+}
+
+.badge-award {
+  background: var(--tag-award-bg);
+  color: var(--tag-award-text);
+}
+
+.badge-support {
+  background: var(--tag-support-bg);
+  color: var(--tag-support-text);
+}
+
+.film-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.film-link:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+/* ===== Fade-in Animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .page-title { font-size: 1.5rem; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .stat-card { padding: 14px; }
+  .stat-number { font-size: 1.4rem; }
+  .film-header { flex-direction: column; gap: 6px; }
+  .film-card { padding: 16px; }
+  .filter-tab { font-size: 0.8rem; padding: 6px 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="v7.html" class="nav-brand" style="text-decoration:none;">Younga Shin</a>
+    <a href="v7.html" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    <div class="nav-controls">
+      <button class="nav-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Page Header ===== -->
+<header class="page-header fade-in">
+  <div class="container">
+    <h1 class="page-title">Filmography &mdash; 필모그래피</h1>
+    <p class="page-subtitle">30+ 단편영화 제작 참여</p>
+    <div class="section-divider"></div>
+  </div>
+</header>
+
+<!-- ===== Stats ===== -->
+<section style="padding: 0 0 16px;">
+  <div class="container">
+    <div class="stats-bar fade-in">
+      <div class="stat-card">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">총 작품</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">7</div>
+        <div class="stat-label">연도 (2019-2025)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">영화제 선정</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5</div>
+        <div class="stat-label">배리어프리 영화</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Filter Tabs ===== -->
+<div class="container">
+  <div class="filter-bar fade-in">
+    <button class="filter-tab active" data-filter="all">전체</button>
+    <button class="filter-tab" data-filter="short">단편영화</button>
+    <button class="filter-tab" data-filter="commercial">상업/광고/MV</button>
+    <button class="filter-tab" data-filter="barrier">배리어프리</button>
+  </div>
+</div>
+
+<!-- ===== Film List ===== -->
+<div class="container film-list">
+
+  <!-- ====== 2025 ====== -->
+  <div class="year-group fade-in" data-years="2025">
+    <div class="year-label">2025 <span class="year-count">1</span></div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">해남배추</span>
+          <span class="film-role">스크립터</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <a href="https://sifff.kr/product/해남배추haenam-cabbage/743/" target="_blank" class="film-badge badge-festival"><i class="fa-solid fa-trophy"></i> 속초국제음식영화제 — Korean Short Section</a>
+        <span class="film-badge badge-festival"><i class="fa-solid fa-globe"></i> World Culture Film Festival, LA — Official Selection</span>
+        <span class="film-badge badge-festival"><i class="fa-solid fa-film"></i> 제12회 인천독립영화제 — Official Selection</span>
+        <a href="https://indieshortfest.com/2025/10/08/haenam-cabbage/" target="_blank" class="film-badge badge-festival"><i class="fa-solid fa-award"></i> Indie Shorts Fest — Semi-Finalist</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 2024 ====== -->
+  <div class="year-group fade-in" data-years="2024">
+    <div class="year-label">2024 <span class="year-count">1</span></div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">갑자기 분위기 스파시바 (Suddenly, Home)</span>
+          <span class="film-role">조명부 / 타이틀 디자인</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-check-circle"></i> 2020 독립예술영화제작지원 단편부문 (KOFIC)</span>
+        <a href="https://www.imdb.com/title/tt32749158/" target="_blank" class="film-link"><i class="fa-brands fa-imdb"></i> IMDb</a>
+        <a href="https://indieshortfest.com/2024/06/07/suddenly-home/" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> Indie Short Fest</a>
+        <span class="film-badge badge-award"><i class="fa-solid fa-award"></i> 2024 Berlin Lift-Off — Jury's Choice</span>
+        <span class="film-badge badge-festival"><i class="fa-solid fa-star"></i> 2024 Indie Film Fest Final Awards — Nominee</span>
+        <span class="film-badge badge-festival"><i class="fa-solid fa-star"></i> NY Film & Female Actress Award — Finalist</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 2022 ====== -->
+  <div class="year-group fade-in" data-years="2022">
+    <div class="year-label">2022 <span class="year-count">5</span></div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">천사가 아니야</span>
+          <span class="film-role">조연출</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">프레임너머</span>
+          <span class="film-role">연출지원</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">점</span>
+          <span class="film-role">촬영부</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-hands-helping"></i> 동국대 LINC 3.0 / 나누멜바그</span>
+        <a href="https://linc.dongguk.edu/eam/twin/program/1170" target="_blank" class="film-link"><i class="fa-solid fa-link"></i> 제작현장</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">12세용 1단계</span>
+          <span class="film-role">붐 오퍼레이터</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-hands-helping"></i> 동국대 LINC 3.0 / 나누멜바그</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">연극 &lt;돌아온다&gt; 홍보영상</span>
+          <span class="film-role">제작부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-building"></i> 예술의전당, 더블케이엔터테인먼트</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 2021 ====== -->
+  <div class="year-group fade-in" data-years="2021">
+    <div class="year-label">2021 <span class="year-count">9</span></div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">복숭아의 유통기한</span>
+          <span class="film-role">조연출</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-festival"><i class="fa-solid fa-film"></i> 제26회 도시영화제 경쟁부문</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">이춘자씨</span>
+          <span class="film-role">다큐 연출</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">꽃으로 마음을 전해요</span>
+          <span class="film-role">촬영 / 편집</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/9juBCtMlNB8" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">필름</span>
+          <span class="film-role">조명부</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">예술인을 찾습니다</span>
+          <span class="film-role">조명</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">나의 그림자</span>
+          <span class="film-role">조명 / 사운드</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">과민성대장증후군2</span>
+          <span class="film-role">편집</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/Q92EW0TRliQ" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">현대글로비스 신사옥 홍보영상</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <a href="https://vimeo.com/515632630" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> Vimeo</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">Bling Bling - Oh MAMA MV</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">MV</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/LJ07w2qbfqk" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> YouTube</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 2020 ====== -->
+  <div class="year-group fade-in" data-years="2020">
+    <div class="year-label">2020 <span class="year-count">16</span></div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">완벽한 생일</span>
+          <span class="film-role">연출 / 촬영</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">sign</span>
+          <span class="film-role">연출 / 촬영 / 편집</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/gUHmJ-cCZSo" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">최고의 시</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-check-circle"></i> 제11회 서울교통공사 국제지하철영화제 사전제작지원작</span>
+        <span class="film-badge badge-festival"><i class="fa-solid fa-film"></i> 제12회 서울국제초단편영화제 개막작</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">창경궁에서</span>
+          <span class="film-role">촬영 / 기획</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-award"><i class="fa-solid fa-trophy"></i> 2020 문화유산채널 영상공모전 — 아이디어뱅크상 (한국문화재재단)</span>
+        <a href="https://www.youtube.com/watch?v=rFpjk3HAqvM" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">일단 똥을 싸라</span>
+          <span class="film-role">촬영</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">쓰리쿠</span>
+          <span class="film-role">스크립터</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">식물</span>
+          <span class="film-role">조명</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">온전한 온기</span>
+          <span class="film-role">제작</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">인터뷰</span>
+          <span class="film-role">사운드</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">콤플렉스</span>
+          <span class="film-role">배우</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="short">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">과민성대장증후군</span>
+          <span class="film-role">편집</span>
+        </div>
+        <span class="film-category-tag cat-short">단편영화</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/BoAMHCoQeio" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">청바지</span>
+          <span class="film-role">조명감독</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-hands-helping"></i> 고양시청소년진로센터 이루어DREAM / 리바이스팀 / 나누멜바그</span>
+        <a href="https://youtu.be/v1-3e1sGPEM" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">학교탈출</span>
+          <span class="film-role">제작</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-hands-helping"></i> 이루어DREAM 프로젝트 (나누멜바그) / 이루다학교 공동제작</span>
+        <span class="film-badge badge-support"><i class="fa-solid fa-check-circle"></i> 고양시청소년진로센터 이루어DREAM 선정</span>
+        <a href="https://youtu.be/hcUzDc-gZUc" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> 시청</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">아마 늦은 여름이었을거야</span>
+          <span class="film-role">배리어프리 화면해설</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-festival"><i class="fa-solid fa-star"></i> 서울노인영화제 폐막작</span>
+        <a href="http://sisff.seoulnoin.or.kr/honor2022" target="_blank" class="film-link"><i class="fa-solid fa-external-link-alt"></i> 영화제</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">태평동 사람들</span>
+          <span class="film-role">배리어프리 화면해설</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-festival"><i class="fa-solid fa-star"></i> 서울노인영화제 폐막작</span>
+        <a href="http://sisff.seoulnoin.or.kr/honor2022" target="_blank" class="film-link"><i class="fa-solid fa-external-link-alt"></i> 영화제</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">Fendi Renaissance - Anima Mundi: Seoul</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <a href="https://vimeo.com/489244278" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> Vimeo</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">카카오미니 바이럴 광고</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/8NwgJZIULBo" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> YouTube</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">티나 홈파티 키트 바이럴 광고</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/jKDWQ3JAk1c" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> YouTube</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">드로마 메리메이드 (CLASS 101)</span>
+          <span class="film-role">연출부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-building"></i> CLASS 101 온라인 클래스 강의영상</span>
+        <a href="https://class101.net/ko/products/5f1c1133052090001cdf3172" target="_blank" class="film-link"><i class="fa-solid fa-link"></i> CLASS 101</a>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">중구 사회적 경제홍보영상</span>
+          <span class="film-role">촬영부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="commercial">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">동국대 스포츠문화학과 연무제 영상</span>
+          <span class="film-role">촬영부</span>
+        </div>
+        <span class="film-category-tag cat-commercial">상업/광고</span>
+      </div>
+      <div class="film-details">
+        <a href="https://youtu.be/avmO3l70ug4" target="_blank" class="film-link"><i class="fa-solid fa-play-circle"></i> YouTube</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 2019 ====== -->
+  <div class="year-group fade-in" data-years="2019">
+    <div class="year-label">2019 <span class="year-count">2</span></div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">심연을 들여다볼 때</span>
+          <span class="film-role">조명부</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+    </div>
+
+    <div class="film-card" data-category="barrier">
+      <div class="film-header">
+        <div class="film-title-group">
+          <span class="film-title">소풍</span>
+          <span class="film-role">제작부 / 붐 오퍼레이터</span>
+        </div>
+        <span class="film-category-tag cat-barrier">배리어프리</span>
+      </div>
+      <div class="film-details">
+        <span class="film-badge badge-support"><i class="fa-solid fa-building"></i> 씨네허브 온라인 배급</span>
+        <span class="film-badge badge-support"><i class="fa-solid fa-check-circle"></i> NH농협은행 영화&다큐멘터리 제작지원 사업</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Younga Shin. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== Scripts ===== -->
+<script>
+// Dark mode toggle
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check saved theme or system preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  html.setAttribute('data-theme', savedTheme);
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  html.setAttribute('data-theme', 'dark');
+}
+updateThemeIcon();
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateThemeIcon();
+});
+
+function updateThemeIcon() {
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  themeToggle.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+}
+
+// Filter tabs
+const filterTabs = document.querySelectorAll('.filter-tab');
+const filmCards = document.querySelectorAll('.film-card');
+const yearGroups = document.querySelectorAll('.year-group');
+
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.dataset.filter;
+
+    filmCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Hide year groups with no visible cards
+    yearGroups.forEach(group => {
+      const visibleCards = group.querySelectorAll('.film-card:not([style*="display: none"])');
+      group.style.display = visibleCards.length === 0 ? 'none' : '';
+    });
+  });
+});
+
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+
+fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

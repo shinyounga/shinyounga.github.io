@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Younga Shin | AI Researcher & Creative Technologist</title>
+<meta name="description" content="Academic portfolio of Younga Shin (신영아) — AI Researcher at Yonsei University Smart Infrastructure Laboratory.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" rel="stylesheet">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===== CSS Custom Properties ===== */
+:root {
+  --font-heading: 'Poppins', 'Pretendard', sans-serif;
+  --font-body: 'Pretendard', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #eef1f5;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a68;
+  --text-muted: #7a7a96;
+  --accent: #16697a;
+  --accent-light: #e8f4f7;
+  --accent-hover: #124f5c;
+  --border: #e2e6ec;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --tag-journal-bg: #e8f4f7;
+  --tag-journal-text: #16697a;
+  --tag-conf-bg: #f0edf7;
+  --tag-conf-text: #5a4a8a;
+  --progress-bg: #e2e6ec;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --timeline-line: #d4d8e0;
+  --selection-bg: #16697a;
+  --selection-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #1c2333;
+  --bg-card: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #b1bac4;
+  --text-muted: #7d8590;
+  --accent: #58a6b8;
+  --accent-light: #162830;
+  --accent-hover: #7fc4d4;
+  --border: #30363d;
+  --shadow: rgba(0, 0, 0, 0.25);
+  --shadow-md: rgba(0, 0, 0, 0.35);
+  --tag-journal-bg: #162830;
+  --tag-journal-text: #58a6b8;
+  --tag-conf-bg: #1e1a2e;
+  --tag-conf-text: #9d8ec4;
+  --progress-bg: #30363d;
+  --nav-bg: rgba(13, 17, 23, 0.92);
+  --timeline-line: #30363d;
+  --selection-bg: #58a6b8;
+  --selection-text: #0d1117;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.nav-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.lang-btn {
+  width: auto;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* ===== Mobile Menu ===== */
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 12px 24px;
+    gap: 2px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links a {
+    display: block;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 72px 0;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* ===== Fade-in Animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== About Section ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-light);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.about-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.about-title {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.about-affiliation {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.about-bio {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-contact-info {
+  margin-bottom: 16px;
+}
+.about-contact-info .contact-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+.about-contact-info .contact-line i {
+  color: var(--accent);
+  width: 18px;
+  text-align: center;
+}
+.about-contact-info .contact-line a {
+  color: var(--text-secondary);
+}
+.about-contact-info .contact-line a:hover {
+  color: var(--accent);
+}
+
+.social-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social-pills a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+.social-pills a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+.social-pills a i {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+  .about-photo {
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+  }
+  .about-contact-info .contact-line {
+    justify-content: center;
+  }
+  .social-pills {
+    justify-content: center;
+  }
+}
+
+/* ===== Experience Timeline ===== */
+.exp-group-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 24px;
+  margin-top: 36px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.exp-group-title:first-child {
+  margin-top: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline-year {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding-top: 2px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  padding-left: 24px;
+  border-left: 2px solid var(--timeline-line);
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+}
+
+.timeline-org {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.timeline-role {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.timeline-detail {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.timeline-detail a {
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .timeline-year {
+    text-align: left;
+  }
+}
+
+/* ===== Skills ===== */
+.skills-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 700px) {
+  .skills-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills-group {
+  margin-bottom: 36px;
+}
+
+.skills-group-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skills-group-title i {
+  color: var(--accent);
+}
+
+.skill-bar-item {
+  margin-bottom: 14px;
+}
+
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.skill-bar-label i {
+  margin-right: 8px;
+  color: var(--accent);
+  width: 18px;
+  text-align: center;
+}
+
+.skill-bar-track {
+  height: 8px;
+  background: var(--progress-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.2s ease;
+}
+
+[data-theme="dark"] .skill-bar-fill {
+  background: linear-gradient(90deg, var(--accent), #7fc4d4);
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+.skill-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+.skill-tag i {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+
+/* ===== Research Cards ===== */
+.research-sub-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 20px;
+  margin-top: 36px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.research-sub-title:first-child {
+  margin-top: 0;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.research-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s;
+}
+.research-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px var(--shadow-md);
+}
+.research-card.featured {
+  border-left: 4px solid var(--accent);
+}
+
+.research-card .period-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.research-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.research-card .funder {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.research-card .desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.research-tags span {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* ===== Publications ===== */
+.pub-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+}
+.pub-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.pub-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pub-tag.journal {
+  background: var(--tag-journal-bg);
+  color: var(--tag-journal-text);
+}
+.pub-tag.conference {
+  background: var(--tag-conf-bg);
+  color: var(--tag-conf-text);
+}
+
+.pub-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+
+.pub-authors {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.pub-venue {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.pub-doi {
+  font-size: 0.78rem;
+  margin-top: 6px;
+}
+
+/* ===== SBS Productions ===== */
+.sbs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.sbs-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.sbs-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.sbs-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.sbs-info {
+  padding: 14px 16px;
+}
+
+.sbs-program {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.sbs-ep-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.view-all-btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-md);
+}
+
+/* ===== Filmography ===== */
+/* Filmography showcase grid */
+.film-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .film-showcase {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+.film-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.film-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 24px var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.film-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-tertiary);
+}
+
+.film-card-body {
+  padding: 18px 20px;
+}
+
+.film-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.film-year {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.film-category-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.film-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.film-role {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.film-festivals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.festival-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  padding: 3px 9px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 6px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.festival-badge a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.festival-badge a:hover {
+  color: var(--accent-hover);
+}
+
+.film-note {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ===== Awards & Certs ===== */
+.awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 700px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.awards-col-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.award-row {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.award-row:last-child {
+  border-bottom: none;
+}
+.award-year {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  min-width: 80px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.award-info {
+  flex: 1;
+}
+.award-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.award-org {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.cert-row {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cert-row:last-child {
+  border-bottom: none;
+}
+.cert-year {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  min-width: 64px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+.cert-info {
+  flex: 1;
+}
+.cert-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.cert-issuer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.cert-id {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ===== Contact ===== */
+.contact-section {
+  background: var(--bg-secondary);
+  text-align: center;
+}
+.contact-section p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.contact-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  color: #fff;
+}
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+.contact-socials a {
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+.contact-socials a:hover { color: var(--accent); }
+
+/* ===== Footer ===== */
+footer {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== Utility ===== */
+.bg-alt {
+  background: var(--bg-secondary);
+}
+
+.mb-0 { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Younga Shin</a>
+    <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#research" onclick="closeMobileMenu()">Research</a></li>
+      <li><a href="#publications" onclick="closeMobileMenu()">Publications</a></li>
+      <li><a href="#media" onclick="closeMobileMenu()">Film &amp; Media</a></li>
+      <li><a href="#awards" onclick="closeMobileMenu()">Awards</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="nav-btn lang-btn" onclick="toggleLang()" id="langBtn" title="Toggle Language">EN</button>
+      <button class="nav-btn" onclick="toggleTheme()" id="themeBtn" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid fade-in">
+      <img src="images/profile.jpg" alt="Younga Shin" class="about-photo">
+      <div>
+        <h1 class="about-name"><span data-ko="신영아" data-en="Younga Shin">신영아</span> <span style="font-size:1rem;font-weight:400;color:var(--text-muted)">/ <span data-ko="Younga Shin" data-en="신영아">Younga Shin</span></span></h1>
+        <p class="about-title">AI Researcher &amp; Creative Technologist</p>
+        <p class="about-affiliation">
+          <span data-ko="연세대학교 건설환경공학과 석사과정 · 스마트인프라연구실" data-en="M.S. Student, Dept. of Civil & Environmental Engineering, Yonsei University · Smart Infrastructure Lab">연세대학교 건설환경공학과 석사과정 · 스마트인프라연구실</span>
+        </p>
+        <p class="about-bio">
+          <span data-ko="연세대학교 스마트인프라연구실에서 김홍조 교수님의 지도 아래 석사과정을 밟고 있습니다. 건설공학 분야에 인공지능과 딥러닝을 적용하는 연구를 수행하고 있으며, 건설 근로자 건강 관리를 위한 AI 기반 프레임워크, 미계측 유역의 수위 예측 모델, 건설 도메인에서의 RAG, 건설 현장 이미지에서의 PPE 객체 탐지 등이 주요 연구 주제입니다." data-en="I am a Master's student in the Smart Infrastructure Laboratory at Yonsei University, advised by Professor Hongjo Kim. My research focuses on applying artificial intelligence and deep learning to construction engineering challenges — including AI-based health management for construction workers, water level prediction for ungauged basins, RAG in the construction domain, and object detection of PPE in construction site images.">연세대학교 스마트인프라연구실에서 김홍조 교수님의 지도 아래 석사과정을 밟고 있습니다. 건설공학 분야에 인공지능과 딥러닝을 적용하는 연구를 수행하고 있으며, 건설 근로자 건강 관리를 위한 AI 기반 프레임워크, 미계측 유역의 수위 예측 모델, 건설 도메인에서의 RAG, 건설 현장 이미지에서의 PPE 객체 탐지 등이 주요 연구 주제입니다.</span>
+        </p>
+        <div class="about-contact-info">
+          <div class="contact-line"><i class="fas fa-map-marker-alt"></i> Seoul, South Korea</div>
+          <div class="contact-line"><i class="fas fa-envelope"></i> <a href="mailto:shinyounga00@gmail.com">shinyounga00@gmail.com</a></div>
+        </div>
+        <div class="social-pills">
+          <a href="https://www.linkedin.com/in/younga-shin" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://github.com/shinyounga" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=ghNiW3sAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+          <a href="http://orcid.org/0009-0006-6792-6395" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+          <a href="https://www.imdb.com/name/nm17437797/" target="_blank"><i class="fab fa-imdb"></i> IMDb</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title fade-in">Experience</h2>
+    <div class="section-divider fade-in"></div>
+
+    <!-- Education -->
+    <div class="exp-group-title fade-in"><i class="fas fa-graduation-cap"></i> <span data-ko="Education" data-en="Education">Education</span></div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-year">2024.09 — Present</div>
+      <div class="timeline-content">
+        <div class="timeline-org"><span data-ko="연세대학교" data-en="Yonsei University">연세대학교</span></div>
+        <div class="timeline-role"><span data-ko="건설환경공학과 석사과정" data-en="M.S. in Civil & Environmental Engineering">건설환경공학과 석사과정</span></div>
+        <div class="timeline-detail"><span data-ko="Advisor: 김홍조 교수" data-en="Advisor: Prof. Hongjo Kim">Advisor: 김홍조 교수</span></div>
+        <div class="timeline-detail"><span data-ko="GPA 4.22/4.3 · 스마트인프라연구실" data-en="GPA 4.22/4.3 · Smart Infrastructure Laboratory">GPA 4.22/4.3 · 스마트인프라연구실</span></div>
+        <div class="timeline-detail"><span data-ko="재학조교(TA): 공학정보처리 (ENG1108)" data-en="Teaching Assistant: Engineering Information Processing (ENG1108)">재학조교(TA): 공학정보처리 (ENG1108)</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-year">2023.08 — 2024.01</div>
+      <div class="timeline-content">
+        <div class="timeline-org"><span data-ko="ISTC, 프랑스 릴" data-en="ISTC, Lille, France">ISTC, 프랑스 릴</span></div>
+        <div class="timeline-role"><span data-ko="교환학생 — 미디어커뮤니케이션학" data-en="Exchange Student, Media Communication">교환학생 — 미디어커뮤니케이션학</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-year">2019.03 — 2024.08</div>
+      <div class="timeline-content">
+        <div class="timeline-org"><span data-ko="동국대학교" data-en="Dongguk University">동국대학교</span></div>
+        <div class="timeline-role"><span data-ko="영화영상학과 학사 (부전공: 미디어커뮤니케이션학)" data-en="B.A. in Film & Digital Media (Minor: Media Communication)">영화영상학과 학사 (부전공: 미디어커뮤니케이션학)</span></div>
+        <div class="timeline-detail"><span data-ko="Advisor: 박종호 교수" data-en="Advisor: Prof. Jongho Park">Advisor: 박종호 교수</span></div>
+        <div class="timeline-detail"><span data-ko="GPA 4.22/4.5 · Summa Cum Laude · 30+ 단편영화" data-en="GPA 4.22/4.5 · Summa Cum Laude · 30+ short films">GPA 4.22/4.5 · Summa Cum Laude · 30+ 단편영화</span></div>
+        <div class="timeline-detail"><span data-ko="예술대학 학생회 사무국장(2021) · 동국영화제 기획운영팀장(2021) · 나누멜바그 배리어프리 영화 봉사(2019-2020)" data-en="College of Arts Student Council Secretary General (2021) · Dongguk Film Festival Planning Director (2021) · Barrier-Free Film Volunteering (2019-2020)">예술대학 학생회 사무국장(2021) · 동국영화제 기획운영팀장(2021) · 나누멜바그 배리어프리 영화 봉사(2019-2020)</span></div>
+      </div>
+    </div>
+
+    <!-- Work -->
+    <div class="exp-group-title fade-in"><i class="fas fa-briefcase"></i> <span data-ko="Work" data-en="Work">Work</span></div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-year">2021.07 — 2024.02</div>
+      <div class="timeline-content">
+        <div class="timeline-org">SBS NEWS (<span data-ko="스브스뉴스" data-en="SUBUSU NEWS">스브스뉴스</span>)</div>
+        <div class="timeline-role"><span data-ko="서브촬영 PD (프리랜서)" data-en="Sub-Camera Director (Freelance)">서브촬영 PD (프리랜서)</span></div>
+        <div class="timeline-detail"><span data-ko="문명특급, 서울리스, 가갸거겨고교 등 7개 프로그램 · 50+ 에피소드" data-en="SUBUSU NEWS, MMTG, OMG Electronics and 4 more programs · 50+ episodes">문명특급, 서울리스, 가갸거겨고교 등 7개 프로그램 · 50+ 에피소드</span></div>
+        <div class="timeline-detail"><span data-ko="뉴스 피처 영상 기획·촬영, 카메라·조명·사운드 운용" data-en="Planned and executed visual sequences for news features, managing camera, lighting, and sound">뉴스 피처 영상 기획·촬영, 카메라·조명·사운드 운용</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-year">2019 — 2024</div>
+      <div class="timeline-content">
+        <div class="timeline-org"><span data-ko="프리랜서 연출부" data-en="Freelance Production Crew">프리랜서 연출부</span></div>
+        <div class="timeline-role"><span data-ko="연출부" data-en="Production Crew">연출부</span></div>
+        <div class="timeline-detail">
+          <a href="https://class101.net/ko/products/5f1c1133052090001cdf3172" target="_blank"><span data-ko="CLASS101 드로마 메리메이드" data-en="CLASS101 Droma Merimade">CLASS101 드로마 메리메이드</span> <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a><br>
+          <a href="https://youtu.be/8NwgJZIULBo" target="_blank"><span data-ko="카카오미니 바이럴 광고" data-en="Kakao Mini Viral Ad">카카오미니 바이럴 광고</span> <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a><br>
+          <a href="https://vimeo.com/489244278" target="_blank">Fendi Renaissance - Anima Mundi: Seoul <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-year">2022</div>
+      <div class="timeline-content">
+        <div class="timeline-org"><span data-ko="LX 한국국토정보공사" data-en="LX Korea Land & Geospatial Informatix Corporation">LX 한국국토정보공사</span></div>
+        <div class="timeline-role"><span data-ko="국민 서포터즈 '랜드러버' — 영상기자" data-en="National Supporters 'Land Lover' — Video Journalist">국민 서포터즈 '랜드러버' — 영상기자</span></div>
+        <div class="timeline-detail"><span data-ko="영상 기획, 촬영 및 편집 · 2022 월드 스마트시티 엑스포 취재 · 2022 스마트국토 엑스포 취재" data-en="Video planning, filming & editing · 2022 World Smart City Expo coverage · 2022 Smart Land Expo coverage">영상 기획, 촬영 및 편집 · 2022 월드 스마트시티 엑스포 취재 · 2022 스마트국토 엑스포 취재</span></div>
+        <div class="timeline-detail"><span data-ko="LX공간드림센터 홍보 콘텐츠 · 3D 문화유산 서비스 소개 영상" data-en="LX Spatial Dream Center promotional content · 3D Cultural Heritage service introduction video">LX공간드림센터 홍보 콘텐츠 · 3D 문화유산 서비스 소개 영상</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title fade-in">Skills</h2>
+    <div class="section-divider fade-in"></div>
+
+    <div class="skills-two-col fade-in">
+      <!-- Left column: AI/ML with progress bars -->
+      <div class="skills-group">
+        <div class="skills-group-title"><i class="fas fa-robot"></i> AI / Machine Learning</div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span><i class="fa-brands fa-python"></i> Python</span><span>95%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span><i class="fa-solid fa-fire"></i> PyTorch</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span><i class="fa-solid fa-brain"></i> Deep Learning</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span><i class="fa-solid fa-comments"></i> NLP / RAG</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span><i class="fa-solid fa-eye"></i> Computer Vision</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+      </div>
+
+      <!-- Right column: Engineering + Creative + Languages with icon tags -->
+      <div>
+        <div class="skills-group">
+          <div class="skills-group-title"><i class="fas fa-tools"></i> Engineering &amp; Tools</div>
+          <div class="tag-grid">
+            <span class="skill-tag"><i class="fa-solid fa-building"></i> BIM / Revit</span>
+            <span class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+            <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+            <span class="skill-tag"><i class="fa-brands fa-linux"></i> Linux</span>
+            <span class="skill-tag"><i class="fa-solid fa-chart-simple"></i> Data Analysis</span>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title"><i class="fas fa-video"></i> Media &amp; Production</div>
+          <div class="tag-grid">
+            <span class="skill-tag"><i class="fa-solid fa-film"></i> Final Cut Pro</span>
+            <span class="skill-tag"><i class="fa-solid fa-video"></i> Premiere Pro</span>
+            <span class="skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> After Effects</span>
+            <span class="skill-tag"><i class="fa-solid fa-image"></i> Photoshop</span>
+            <span class="skill-tag"><i class="fa-solid fa-clapperboard"></i> Video Production</span>
+            <span class="skill-tag"><i class="fa-solid fa-pen-fancy"></i> Storytelling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESEARCH ===== -->
+<section id="research" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title fade-in">Research</h2>
+    <div class="section-divider fade-in"></div>
+
+    <div class="research-sub-title fade-in"><i class="fas fa-flask"></i> <span data-ko="Research Projects" data-en="Research Projects">Research Projects</span></div>
+    <div class="research-grid fade-in">
+      <!-- Funded 1 -->
+      <div class="research-card">
+        <span class="period-badge">2024 — Present</span>
+        <h4><span data-ko="자율 진화형 인공지능 기반 제방 붕괴 조기 감지 및 선제적 대응 스마트 센싱 플랫폼 개발" data-en="Autonomous Evolutionary AI-Based Smart Sensing Platform for Early Detection and Proactive Response to Levee Failures">자율 진화형 인공지능 기반 제방 붕괴 조기 감지 및 선제적 대응 스마트 센싱 플랫폼 개발</span></h4>
+        <p class="funder"><span data-ko="한국연구재단 — 주관연구기관, 2024 STEAM 연구사업 (미래유망파이오니어)" data-en="National Research Foundation of Korea, Korea">한국연구재단 — 주관연구기관, 2024 STEAM 연구사업 (미래유망파이오니어)</span></p>
+        <p class="desc"><span data-ko="실시간 제방 붕괴 모니터링 및 조기 경보를 위한 AI 기반 시스템 개발" data-en="Developing AI-driven systems for real-time levee failure monitoring and early warning">실시간 제방 붕괴 모니터링 및 조기 경보를 위한 AI 기반 시스템 개발</span></p>
+      </div>
+      <!-- Funded 2 -->
+      <div class="research-card">
+        <span class="period-badge">2024 — 2025</span>
+        <h4><span data-ko="영상 기반 임시 구조물 설치 해체 단계 안전 확보 기술" data-en="Vision-Based Safety Securing Technology for Temporary Structure Installation and Dismantlement">영상 기반 임시 구조물 설치 해체 단계 안전 확보 기술</span></h4>
+        <p class="funder"><span data-ko="국토교통과학기술진흥원 — 공동연구기관, 스마트건설기술개발사업 9세부" data-en="The Korea Agency for Infrastructure Technology and Advancement, Korea">국토교통과학기술진흥원 — 공동연구기관, 스마트건설기술개발사업 9세부</span></p>
+        <p class="desc"><span data-ko="개인보호장비(PPE) 객체 감지를 위한 데이터셋 구축" data-en="Development of a dataset for object detection of PPE (Personal Protective Equipment)">개인보호장비(PPE) 객체 감지를 위한 데이터셋 구축</span></p>
+      </div>
+      <!-- Funded 3 -->
+      <div class="research-card">
+        <span class="period-badge">2024</span>
+        <h4><span data-ko="지능형 CCTV-AI 기반 건설현장 영상분석 기술 개발" data-en="Development of Intelligent CCTV-AI-Based Construction Site Video Analysis Technology">지능형 CCTV-AI 기반 건설현장 영상분석 기술 개발</span></h4>
+        <p class="funder"><span data-ko="금호건설 — 주관연구기관" data-en="Kumho Engineering & Construction, Korea">금호건설 — 주관연구기관</span></p>
+        <p class="desc"><span data-ko="AI 모델 검증 및 이해관계자 발표를 위한 기술 시연 및 홍보 영상 제작" data-en="Producing technical demonstration and promotional videos for AI model validation and stakeholder presentation">AI 모델 검증 및 이해관계자 발표를 위한 기술 시연 및 홍보 영상 제작</span></p>
+      </div>
+    </div>
+
+    <div class="research-sub-title fade-in"><i class="fas fa-code"></i> <span data-ko="Research Topics" data-en="Research Topics">Research Topics</span></div>
+    <div class="research-grid fade-in">
+      <!-- Individual 1 -->
+      <div class="research-card featured">
+        <div class="research-tags">
+          <span>Time-Series</span><span>PyTorch</span><span>Hydrology</span>
+        </div>
+        <h4><span data-ko="수위 예측 시스템" data-en="Water Level Forecasting System">수위 예측 시스템</span></h4>
+        <p class="desc"><span data-ko="제방 모니터링 및 수위 예측을 위한 시계열 예측 모델 구축. 수문학적 데이터와 딥러닝을 결합한 홍수 위험 평가." data-en="Time-series prediction model for levee monitoring and water level forecasting. Combines hydrological data with deep learning for flood risk assessment.">제방 모니터링 및 수위 예측을 위한 시계열 예측 모델 구축. 수문학적 데이터와 딥러닝을 결합한 홍수 위험 평가.</span></p>
+      </div>
+      <!-- Individual 2 -->
+      <div class="research-card featured">
+        <div class="research-tags">
+          <span>LLM</span><span>RAG</span><span>Construction</span>
+        </div>
+        <h4><span data-ko="건설 문서를 위한 RAG 시스템" data-en="RAG for Construction Documents">건설 문서를 위한 RAG 시스템</span></h4>
+        <p class="desc"><span data-ko="건설공학 문서에 특화된 검색 증강 생성(RAG) 시스템 구현. 기술 사양 및 표준에 대한 지능형 Q&A 지원." data-en="Retrieval-Augmented Generation system for construction documents. Enables intelligent Q&A over technical specifications.">건설공학 문서에 특화된 검색 증강 생성(RAG) 시스템 구현. 기술 사양 및 표준에 대한 지능형 Q&A 지원.</span></p>
+      </div>
+      <!-- Individual 3 -->
+      <div class="research-card">
+        <div class="research-tags">
+          <span>Computer Vision</span><span>Object Detection</span>
+        </div>
+        <h4><span data-ko="건설 현장 안전 모니터링" data-en="PPE Detection in Site Imagery">건설 현장 안전 모니터링</span></h4>
+        <p class="desc"><span data-ko="객체 감지 및 이미지 분류를 활용한 건설 현장 PPE 착용 여부 감지 컴퓨터 비전 모델." data-en="Computer vision model for detecting PPE compliance on construction sites using object detection.">객체 감지 및 이미지 분류를 활용한 건설 현장 PPE 착용 여부 감지 컴퓨터 비전 모델.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PUBLICATIONS ===== -->
+<section id="publications">
+  <div class="container">
+    <h2 class="section-title fade-in">Publications</h2>
+    <div class="section-divider fade-in"></div>
+
+    <div class="pub-item fade-in">
+      <span class="pub-tag journal">Journal</span>
+      <p class="pub-title">Retrieval optimization for Retrieval-Augmented Generation in construction engineering documents</p>
+      <p class="pub-authors">Choi, K., Jeong, M., <strong>Shin, Y.</strong>, won Ma, J., Kim, K., &amp; Kim, H. (2026).</p>
+      <p class="pub-venue">Automation in Construction, 182, 106749.</p>
+      <p class="pub-doi"><a href="https://doi.org/10.1016/j.autcon.2025.106749" target="_blank">DOI: 10.1016/j.autcon.2025.106749</a></p>
+    </div>
+
+    <div class="pub-item fade-in">
+      <span class="pub-tag conference">Conference</span>
+      <p class="pub-title">Comparative Analysis of Deep Learning Models for Water-Level Forecasting Using Levee Monitoring Sensor Data</p>
+      <p class="pub-authors"><strong>Shin, Y.</strong>, Choi, K., Kim, Y., &amp; Kim, H. (2025).</p>
+      <p class="pub-venue">CCC 2025, Zadar, Croatia, pp. 416-424.</p>
+      <p class="pub-doi"><a href="https://doi.org/10.22260/CCC2025/0050" target="_blank">DOI: 10.22260/CCC2025/0050</a></p>
+    </div>
+
+    <div class="pub-item fade-in">
+      <span class="pub-tag conference">Conference</span>
+      <p class="pub-title">Sensor Network-Based Monitoring System for Early Detection of Levee Failures</p>
+      <p class="pub-authors"><strong>Shin, Y.</strong>, &amp; Kim, H. (2024).</p>
+      <p class="pub-venue">KICEM 2024-11, pp. 134-135.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FILM & MEDIA ===== -->
+<section id="media" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title fade-in">Film &amp; Media</h2>
+    <div class="section-divider fade-in"></div>
+
+    <div class="exp-group-title fade-in"><i class="fas fa-tv"></i> SBS Productions</div>
+    <p class="section-subtitle fade-in"><span data-ko="7개 프로그램 · 50+ 에피소드 서브촬영" data-en="7 Programs · 50+ Episodes as Sub-Camera Director">7개 프로그램 · 50+ 에피소드 서브촬영</span></p>
+    <div class="section-divider fade-in"></div>
+
+    <div class="sbs-grid fade-in">
+      <!-- 1. 문명특급 (MMTG) -->
+      <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=fjJ6V0UIFDY','_blank')">
+        <img class="sbs-thumb" src="https://img.youtube.com/vi/fjJ6V0UIFDY/mqdefault.jpg" alt="문명특급" loading="lazy">
+        <div class="sbs-info">
+          <div class="sbs-program"><span data-ko="문명특급" data-en="MMTG">문명특급</span> (MMTG)</div>
+          <div class="sbs-ep-title"><span data-ko="대중문화 트렌드를 재미있게 파헤치는 SBS 디지털 예능" data-en="SBS digital entertainment exploring pop culture trends">대중문화 트렌드를 재미있게 파헤치는 SBS 디지털 예능</span></div>
+        </div>
+      </div>
+      <!-- 2. 가갸거겨고교 -->
+      <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=8vfocnl59ME','_blank')">
+        <img class="sbs-thumb" src="https://img.youtube.com/vi/8vfocnl59ME/mqdefault.jpg" alt="가갸거겨고교" loading="lazy">
+        <div class="sbs-info">
+          <div class="sbs-program"><span data-ko="가갸거겨고교" data-en="가갸거겨고교">가갸거겨고교</span></div>
+          <div class="sbs-ep-title"><span data-ko="전국 대학 캠퍼스를 탐방하는 캠퍼스 투어 콘텐츠" data-en="Campus tour content exploring universities across Korea">전국 대학 캠퍼스를 탐방하는 캠퍼스 투어 콘텐츠</span></div>
+        </div>
+      </div>
+      <!-- 3. 서울리스 -->
+      <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=NfZu8bRGVoI','_blank')">
+        <img class="sbs-thumb" src="https://img.youtube.com/vi/NfZu8bRGVoI/mqdefault.jpg" alt="서울리스" loading="lazy">
+        <div class="sbs-info">
+          <div class="sbs-program"><span data-ko="서울리스" data-en="Seoulless">서울리스</span></div>
+          <div class="sbs-ep-title"><span data-ko="서울을 벗어나 전국 각 지역을 소개하는 콘텐츠" data-en="Content exploring regions across Korea beyond Seoul">서울을 벗어나 전국 각 지역을 소개하는 콘텐츠</span></div>
+        </div>
+      </div>
+      <!-- 4. 스브스뉴스 (SUBUSU NEWS) -->
+      <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=XGwgeBRwwkI','_blank')">
+        <img class="sbs-thumb" src="https://img.youtube.com/vi/XGwgeBRwwkI/mqdefault.jpg" alt="스브스뉴스" loading="lazy">
+        <div class="sbs-info">
+          <div class="sbs-program"><span data-ko="스브스뉴스" data-en="SUBUSU NEWS">스브스뉴스</span> (SUBUSU NEWS)</div>
+          <div class="sbs-ep-title"><span data-ko="MZ세대를 위한 SBS 디지털 뉴스 콘텐츠" data-en="SBS digital news content for Gen MZ">MZ세대를 위한 SBS 디지털 뉴스 콘텐츠</span></div>
+        </div>
+      </div>
+      <!-- 5. 오목교 전자상가 (OMG ELECTRONICS) -->
+      <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=jwEQKwblulc','_blank')">
+        <img class="sbs-thumb" src="https://img.youtube.com/vi/jwEQKwblulc/mqdefault.jpg" alt="오목교 전자상가" loading="lazy">
+        <div class="sbs-info">
+          <div class="sbs-program"><span data-ko="오목교 전자상가" data-en="OMG ELECTRONICS">오목교 전자상가</span> (OMG)</div>
+          <div class="sbs-ep-title"><span data-ko="IT·테크 제품을 리뷰하고 소개하는 테크 콘텐츠" data-en="Tech content reviewing and introducing IT products">IT·테크 제품을 리뷰하고 소개하는 테크 콘텐츠</span></div>
+        </div>
+      </div>
+      <!-- 6. 재수서바이벌 -->
+      <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=cBtL5u7P3q4','_blank')">
+        <img class="sbs-thumb" src="https://img.youtube.com/vi/cBtL5u7P3q4/mqdefault.jpg" alt="재수서바이벌" loading="lazy">
+        <div class="sbs-info">
+          <div class="sbs-program"><span data-ko="재수서바이벌" data-en="재수서바이벌">재수서바이벌</span></div>
+          <div class="sbs-ep-title"><span data-ko="재수생들의 도전과 성장을 담은 리얼 다큐 콘텐츠" data-en="Real documentary content about gap-year students' challenges and growth">재수생들의 도전과 성장을 담은 리얼 다큐 콘텐츠</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;" class="fade-in">
+      <a href="sbs.html" class="view-all-btn"><span data-ko="전체 보기" data-en="View All">전체 보기</span> &rarr;</a>
+    </div>
+    <div class="exp-group-title fade-in" style="margin-top:48px;"><i class="fas fa-film"></i> Filmography</div>
+
+    <div class="film-showcase fade-in">
+
+      <!-- 1. 해남배추 -->
+      <div class="film-card">
+        <img class="film-card-img" src="images/Haenam_Low_002.jpg" alt="해남배추 스틸컷">
+        <div class="film-card-body">
+          <div class="film-card-meta">
+            <span class="film-year">2025</span>
+            <span class="film-category-tag"><span data-ko="단편영화" data-en="Short Film">단편영화</span></span>
+          </div>
+          <div class="film-title"><span data-ko="해남배추" data-en="Haenam Cabbage">해남배추</span></div>
+          <div class="film-role"><span data-ko="스크립터" data-en="Scripter">스크립터</span></div>
+          <div class="film-festivals">
+            <span class="festival-badge"><span data-ko="속초국제음식영화제" data-en="Sokcho Intl. Food Film Fest">속초국제음식영화제</span> <a href="https://sifff.kr/product/해남배추haenam-cabbage/743/" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
+            <span class="festival-badge"><span data-ko="제12회 인천독립영화제" data-en="12th Incheon Independent Film Fest">제12회 인천독립영화제</span></span>
+            <span class="festival-badge">World Culture Film Fest, LA</span>
+            <span class="festival-badge">Indie Shorts Fest — Semi-Finalist <a href="https://indieshortfest.com/2025/10/08/haenam-cabbage/" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
+            <span class="festival-badge"><a href="https://www.imdb.com/title/tt37449064/" target="_blank"><i class="fab fa-imdb"></i> IMDb</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 갑자기 분위기 스파시바 -->
+      <div class="film-card">
+        <img class="film-card-img" src="images/GAB still1.png" alt="Suddenly, Home 스틸컷">
+        <div class="film-card-body">
+          <div class="film-card-meta">
+            <span class="film-year">2024</span>
+            <span class="film-category-tag"><span data-ko="단편영화" data-en="Short Film">단편영화</span></span>
+          </div>
+          <div class="film-title"><span data-ko="갑자기 분위기 스파시바" data-en="Suddenly, Home">갑자기 분위기 스파시바</span></div>
+          <div class="film-role"><span data-ko="조명부 / 타이틀 디자인" data-en="Lighting / Title Design">조명부 / 타이틀 디자인</span></div>
+          <div class="film-festivals">
+            <span class="festival-badge"><span data-ko="KOFIC 독립예술영화 제작지원 선정" data-en="KOFIC Independent Art Film Support">KOFIC 독립예술영화 제작지원 선정</span></span>
+            <span class="festival-badge">Berlin Lift-Off — Jury's Choice <a href="https://www.imdb.com/title/tt32749158/" target="_blank"><i class="fab fa-imdb"></i></a></span>
+            <span class="festival-badge">Indie Film Fest — Final Awards Nominee <a href="https://indieshortfest.com/2024/06/07/suddenly-home/" target="_blank"><i class="fas fa-external-link-alt"></i></a></span>
+            <span class="festival-badge">NY Film & Female — Finalist</span>
+            <span class="festival-badge"><a href="https://www.imdb.com/title/tt32749158/" target="_blank"><i class="fab fa-imdb"></i> IMDb</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Fendi Renaissance -->
+      <div class="film-card">
+        <img class="film-card-img" src="images/1632394499-1607664598262983-fendi-anima-mundi-korea02jung-eun-kang.webp" alt="Fendi Renaissance 스틸컷">
+        <div class="film-card-body">
+          <div class="film-card-meta">
+            <span class="film-year">2020</span>
+            <span class="film-category-tag"><span data-ko="상업/광고" data-en="Commercial">상업/광고</span></span>
+          </div>
+          <div class="film-title">Fendi Renaissance - Anima Mundi: Seoul</div>
+          <div class="film-role"><span data-ko="연출부" data-en="Production Crew">연출부</span></div>
+          <div class="film-festivals">
+            <span class="festival-badge"><a href="https://vimeo.com/489244278" target="_blank"><i class="fas fa-play-circle"></i> Watch</a></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 학교탈출 (배리어프리) -->
+      <div class="film-card">
+        <img class="film-card-img" src="images/스크린샷 2026-03-30 오전 2.38.56.png" alt="학교탈출 스틸컷">
+        <div class="film-card-body">
+          <div class="film-card-meta">
+            <span class="film-year">2021</span>
+            <span class="film-category-tag"><span data-ko="배리어프리 단편영화" data-en="Barrier-Free Short Film">배리어프리 단편영화</span></span>
+          </div>
+          <div class="film-title"><span data-ko="학교탈출" data-en="School Escape">학교탈출</span></div>
+          <div class="film-role"><span data-ko="제작" data-en="Production">제작</span></div>
+          <div class="film-festivals">
+            <span class="festival-badge"><span data-ko="고양시청소년진로센터 이루어DREAM 프로젝트" data-en="Goyang Youth Career Center irueo DREAM Project — Barrier-Free Short Film">고양시청소년진로센터 이루어DREAM 프로젝트</span></span>
+            <span class="festival-badge"><a href="https://youtu.be/hcUzDc-gZUc" target="_blank"><i class="fas fa-play-circle"></i> Watch</a></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="film-note fade-in">
+      <span data-ko="외 30편 이상 단편영화·광고·배리어프리 제작 참여" data-en="30+ additional short film, commercial & barrier-free credits">외 30편 이상 단편영화·광고·배리어프리 제작 참여</span>
+    </div>
+
+    <div style="text-align:center;" class="fade-in">
+      <a href="films.html" class="view-all-btn"><span data-ko="전체 보기" data-en="View All">전체 보기</span> &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AWARDS & CERTIFICATIONS ===== -->
+<section id="awards" class="bg-alt">
+  <div class="container">
+    <h2 class="section-title fade-in"><span data-ko="Awards &amp; Certifications" data-en="Awards &amp; Certifications">Awards &amp; Certifications</span></h2>
+    <div class="section-divider fade-in"></div>
+
+    <div class="awards-grid fade-in">
+      <!-- Left: Scholarships & Awards -->
+      <div>
+        <div class="awards-col-title"><i class="fas fa-trophy"></i> <span data-ko="Scholarships &amp; Awards" data-en="Scholarships &amp; Awards">Scholarships &amp; Awards</span></div>
+
+        <div class="award-row">
+          <div class="award-year">2025-2026</div>
+          <div class="award-info">
+            <div class="award-name"><span data-ko="종로구장학회 성적우수장학금 (3회)" data-en="Jongno-gu Scholarship Foundation Scholarship (x3, incl. Academic Excellence)">종로구장학회 성적우수장학금 (3회)</span></div>
+            <div class="award-org"><span data-ko="종로구장학회" data-en="Jongno-gu Scholarship Foundation">종로구장학회</span></div>
+          </div>
+        </div>
+
+        <div class="award-row">
+          <div class="award-year">2023</div>
+          <div class="award-info">
+            <div class="award-name"><span data-ko="해외문화탐방 지원 장학생" data-en="Overseas Cultural Exploration Scholarship">해외문화탐방 지원 장학생</span></div>
+            <div class="award-org"><span data-ko="심명문화재단" data-en="Shimmyung Cultural Foundation">심명문화재단</span></div>
+          </div>
+        </div>
+
+        <div class="award-row">
+          <div class="award-year">2020-2023</div>
+          <div class="award-info">
+            <div class="award-name"><span data-ko="동국대학교 성적우수장학 2회, 동국인재육성장학 2회, 근로장학(학생회) 1회, 교환학생장학 1회, 강좌별수석장학 1회" data-en="Academic Excellence Scholarship x2, Dongguk Talent Scholarship x2, Work Scholarship (Student Council) x1, Exchange Scholarship x1, Top-of-Class Scholarship (Aesthetics of Film) x1">동국대학교 성적우수장학 2회, 동국인재육성장학 2회, 근로장학(학생회) 1회, 교환학생장학 1회, 강좌별수석장학 1회</span></div>
+            <div class="award-org"><span data-ko="동국대학교" data-en="Dongguk University">동국대학교</span></div>
+          </div>
+        </div>
+
+        <div class="award-row">
+          <div class="award-year">2020.12</div>
+          <div class="award-info">
+            <div class="award-name"><span data-ko="2020 문화유산채널 아이디어뱅크상" data-en="2020 Cultural Heritage Channel Video Contest — Idea Bank Award">2020 문화유산채널 아이디어뱅크상</span></div>
+            <div class="award-org"><span data-ko="한국문화재재단" data-en="Cultural Heritage Administration">한국문화재재단</span></div>
+          </div>
+        </div>
+
+        <div class="award-row">
+          <div class="award-year">2019-2023</div>
+          <div class="award-info">
+            <div class="award-name"><span data-ko="심명문화재단 장학금 (대학 4년 전액)" data-en="Shimmyung Foundation Full Scholarship (4 years)">심명문화재단 장학금 (대학 4년 전액)</span></div>
+            <div class="award-org"><span data-ko="심명문화재단" data-en="Shimmyung Cultural Foundation">심명문화재단</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Certifications -->
+      <div>
+        <div class="awards-col-title"><i class="fas fa-certificate"></i> <span data-ko="Certifications" data-en="Certifications">Certifications</span></div>
+
+        <div class="cert-row">
+          <div class="cert-year">2024.06</div>
+          <div class="cert-info">
+            <div class="cert-name"><span data-ko="정보처리기사" data-en="Engineer Information Processing">정보처리기사</span></div>
+            <div class="cert-issuer"><span data-ko="한국산업인력공단" data-en="HRD Korea">한국산업인력공단</span></div>
+            <div class="cert-id">24201020496G</div>
+          </div>
+        </div>
+
+        <div class="cert-row">
+          <div class="cert-year">2024.05</div>
+          <div class="cert-info">
+            <div class="cert-name"><span data-ko="한국사능력검정시험 1급" data-en="Korean History Proficiency Test – Level 1">한국사능력검정시험 1급</span></div>
+            <div class="cert-issuer"><span data-ko="국사편찬위원회" data-en="National Institute of Korean History">국사편찬위원회</span></div>
+            <div class="cert-id">70-101286</div>
+          </div>
+        </div>
+
+        <div class="cert-row">
+          <div class="cert-year">2023.09</div>
+          <div class="cert-info">
+            <div class="cert-name"><span data-ko="지적기사" data-en="Engineer Cadastral Surveying">지적기사</span></div>
+            <div class="cert-issuer"><span data-ko="한국산업인력공단" data-en="HRD Korea">한국산업인력공단</span></div>
+            <div class="cert-id">23202020726H</div>
+          </div>
+        </div>
+
+        <div class="cert-row">
+          <div class="cert-year">2022.12</div>
+          <div class="cert-info">
+            <div class="cert-name"><span data-ko="측량및지형공간정보기사" data-en="Engineer Surveying Geo-Spatial Information">측량및지형공간정보기사</span></div>
+            <div class="cert-issuer"><span data-ko="한국산업인력공단" data-en="HRD Korea">한국산업인력공단</span></div>
+            <div class="cert-id">22204020388Y</div>
+          </div>
+        </div>
+
+        <div class="cert-row">
+          <div class="cert-year">2022.03</div>
+          <div class="cert-info">
+            <div class="cert-name"><span data-ko="컴퓨터활용능력 1급" data-en="Computer Specialist in Spreadsheet & Database Level-1">컴퓨터활용능력 1급</span></div>
+            <div class="cert-issuer"><span data-ko="대한상공회의소" data-en="KCCI">대한상공회의소</span></div>
+            <div class="cert-id">22-K9-022518</div>
+          </div>
+        </div>
+
+        <div class="cert-row">
+          <div class="cert-year">2021.02</div>
+          <div class="cert-info">
+            <div class="cert-name"><span data-ko="1종 보통 운전면허" data-en="Class 1 Driver's License">1종 보통 운전면허</span></div>
+            <div class="cert-issuer"><span data-ko="경찰청" data-en="Korean National Police Agency">경찰청</span></div>
+          </div>
+        </div>
+
+        <div class="awards-col-title" style="margin-top: 1.5rem;"><i class="fas fa-language"></i> <span data-ko="Languages" data-en="Languages">Languages</span></div>
+
+        <div class="cert-row">
+          <div class="cert-year">2025.02</div>
+          <div class="cert-info">
+            <div class="cert-name">TOEIC <strong>925</strong> (LC 460 / RC 465)</div>
+            <div class="cert-issuer"><span data-ko="YBM 한국TOEIC위원회" data-en="YBM TOEIC Korea">YBM 한국TOEIC위원회</span></div>
+          </div>
+        </div>
+
+        <div class="cert-row">
+          <div class="cert-year">2024.04</div>
+          <div class="cert-info">
+            <div class="cert-name">TOEIC Speaking <strong>Advanced Low (160)</strong></div>
+            <div class="cert-issuer"><span data-ko="YBM 한국TOEIC위원회" data-en="YBM TOEIC Korea">YBM 한국TOEIC위원회</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="container fade-in">
+    <h2 class="section-title">Contact</h2>
+    <div class="section-divider" style="margin-left:auto;margin-right:auto;"></div>
+    <a href="mailto:shinyounga00@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> shinyounga00@gmail.com</a>
+    <div class="contact-socials">
+      <a href="https://www.linkedin.com/in/younga-shin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/shinyounga" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://scholar.google.com/citations?hl=en&user=ghNiW3sAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="http://orcid.org/0009-0006-6792-6395" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+      <a href="https://www.imdb.com/name/nm17437797/" target="_blank" title="IMDb"><i class="fab fa-imdb"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    &copy; 2026 Younga Shin. Seoul, South Korea.
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ===== Language Toggle =====
+let currentLang = localStorage.getItem('lang') || 'ko';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.getElementById('langBtn').textContent = lang === 'ko' ? 'EN' : 'KO';
+  document.querySelectorAll('[data-ko][data-en]').forEach(el => {
+    el.textContent = lang === 'ko' ? el.getAttribute('data-ko') : el.getAttribute('data-en');
+  });
+}
+
+function toggleLang() {
+  applyLang(currentLang === 'ko' ? 'en' : 'ko');
+}
+
+// ===== Theme Toggle =====
+let currentTheme = localStorage.getItem('theme') || 'light';
+
+function applyTheme(theme) {
+  currentTheme = theme;
+  localStorage.setItem('theme', theme);
+  document.documentElement.setAttribute('data-theme', theme);
+  const icon = document.querySelector('#themeBtn i');
+  icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+function toggleTheme() {
+  applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+}
+
+// ===== Mobile Menu =====
+function toggleMobileMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+
+function closeMobileMenu() {
+  document.getElementById('navLinks').classList.remove('active');
+}
+
+// ===== Skill Bar Animation (IntersectionObserver) =====
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fills = entry.target.querySelectorAll('.skill-bar-fill');
+      fills.forEach(fill => {
+        const width = fill.getAttribute('data-width');
+        fill.style.width = width + '%';
+      });
+      skillObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.skills-group').forEach(group => {
+  skillObserver.observe(group);
+});
+
+// ===== Fade-in Observer =====
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  fadeObserver.observe(el);
+});
+
+// ===== Init =====
+applyTheme(currentTheme);
+applyLang(currentLang);
+</script>
+</body>
+</html>

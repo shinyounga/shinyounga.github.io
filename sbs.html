@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBS NEWS — 방송 제작 | Younga Shin</title>
+<meta name="description" content="SBS NEWS 서브촬영 PD 프리랜서 작업물 — 문명특급, 가갸거겨고교, 서울리스, 스브스뉴스, 오목교 전자상가, 재수서바이벌">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" rel="stylesheet">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===== CSS Custom Properties ===== */
+:root {
+  --font-heading: 'Poppins', 'Pretendard', sans-serif;
+  --font-body: 'Pretendard', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #eef1f5;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a68;
+  --text-muted: #7a7a96;
+  --accent: #16697a;
+  --accent-light: #e8f4f7;
+  --accent-hover: #124f5c;
+  --border: #e2e6ec;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --selection-bg: #16697a;
+  --selection-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #1c2333;
+  --bg-card: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #b1bac4;
+  --text-muted: #7d8590;
+  --accent: #58a6b8;
+  --accent-light: #162830;
+  --accent-hover: #7fc4d4;
+  --border: #30363d;
+  --shadow: rgba(0, 0, 0, 0.25);
+  --shadow-md: rgba(0, 0, 0, 0.35);
+  --nav-bg: rgba(13, 17, 23, 0.92);
+  --selection-bg: #58a6b8;
+  --selection-text: #0d1117;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-link {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.back-link:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.nav-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* ===== Page Header ===== */
+.page-header {
+  padding: 64px 0 40px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.page-header h1 span {
+  color: var(--accent);
+}
+
+.page-header .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ===== Filter Tabs ===== */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 40px;
+}
+
+.filter-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+.filter-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ===== Card Grid ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 860px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ===== Episode Card ===== */
+.episode-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.episode-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px var(--shadow-md);
+  color: inherit;
+}
+
+.episode-card .thumb-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-tertiary);
+}
+
+.episode-card .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.episode-card:hover .thumb-wrap img {
+  transform: scale(1.04);
+}
+
+.episode-card .thumb-wrap .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.episode-card:hover .thumb-wrap .play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.episode-card .card-body {
+  padding: 14px 16px 16px;
+}
+
+.episode-card .program-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.episode-card .program-name .ch-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.episode-card .episode-title {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* ===== Fade-in Animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.site-footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.site-footer .footer-links a {
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.site-footer .footer-links a:hover {
+  color: var(--accent);
+}
+
+/* ===== No Results ===== */
+.no-results {
+  display: none;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 32px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 540px) {
+  .stats-bar {
+    gap: 24px;
+  }
+  .stat-num {
+    font-size: 1.4rem;
+  }
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="v7.html" class="nav-brand">Younga Shin</a>
+      <a href="v7.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Page Header ===== -->
+<header class="page-header container fade-in">
+  <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;flex-wrap:wrap;">
+    <img src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s176-c-k-c0x00ffffff-no-rj" alt="SUBUSU NEWS" style="width:64px;height:64px;border-radius:50%;border:2px solid var(--border);" loading="eager">
+    <div>
+      <h1>SBS NEWS — <span>방송 제작</span></h1>
+      <p class="subtitle">서브촬영 PD (프리랜서) · 7개 프로그램 · 50+ 에피소드</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Stats ===== -->
+<div class="stats-bar container fade-in">
+  <div class="stat-item">
+    <div class="stat-num">7</div>
+    <div class="stat-label">Programs</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">50</div>
+    <div class="stat-label">Episodes</div>
+  </div>
+  <div class="stat-item">
+    <a href="https://www.youtube.com/@SUBUSUNEWS" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+      <div class="stat-num"><i class="fab fa-youtube" style="font-size:1.4rem;color:#ff0000;"></i></div>
+      <div class="stat-label">SUBUSU NEWS</div>
+    </a>
+  </div>
+</div>
+
+<!-- ===== Filter Tabs ===== -->
+<div class="filter-bar container fade-in">
+  <button class="filter-btn active" data-filter="all">전체</button>
+  <button class="filter-btn" data-filter="moonmyung">문명특급</button>
+  <button class="filter-btn" data-filter="gagya">가갸거겨고교</button>
+  <button class="filter-btn" data-filter="seoul-list">서울리스</button>
+  <button class="filter-btn" data-filter="sbs-original">스브스뉴스</button>
+  <button class="filter-btn" data-filter="omokgyo">오목교 전자상가</button>
+  <button class="filter-btn" data-filter="jaesu">재수서바이벌</button>
+</div>
+
+<!-- ===== Card Grid ===== -->
+<div class="card-grid container">
+
+  <!-- ===== 문명특급 (20 episodes) ===== -->
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=G-bkOP6YSD4" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/G-bkOP6YSD4/mqdefault.jpg" alt="문명특급 201화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">201화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=6uuIXobmqTo" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/6uuIXobmqTo/mqdefault.jpg" alt="문명특급 204화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">204화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=cVIGSyz4IY0" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/cVIGSyz4IY0/mqdefault.jpg" alt="문명특급 208화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">208화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=T99Xc-2d0cs" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/T99Xc-2d0cs/mqdefault.jpg" alt="문명특급 211화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">211화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=4eJyKLMe2g4" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/4eJyKLMe2g4/mqdefault.jpg" alt="문명특급 216화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">216화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=fjJ6V0UIFDY" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/fjJ6V0UIFDY/mqdefault.jpg" alt="문명특급 217화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">217화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=AvKajvNREKM" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/AvKajvNREKM/mqdefault.jpg" alt="문명특급 219화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">219화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=nzOdX8k3hTs" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/nzOdX8k3hTs/mqdefault.jpg" alt="문명특급 221화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">221화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=WbA74l8gH7s" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/WbA74l8gH7s/mqdefault.jpg" alt="문명특급 222화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">222화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=YbpXciwW4_E" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/YbpXciwW4_E/mqdefault.jpg" alt="문명특급 크리스마스이브라이브" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">크리스마스이브라이브</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=uRrXefxacW8" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/uRrXefxacW8/mqdefault.jpg" alt="문명특급 228화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">228화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=RAbzGvmkRjM" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/RAbzGvmkRjM/mqdefault.jpg" alt="문명특급 229화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">229화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=-wDEE8gOv1w" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/-wDEE8gOv1w/mqdefault.jpg" alt="문명특급 232화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">232화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=IzRK7gQPXBc" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/IzRK7gQPXBc/mqdefault.jpg" alt="문명특급 233화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">233화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=PhU9fDz06jI" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/PhU9fDz06jI/mqdefault.jpg" alt="문명특급 235화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">235화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=MprPLQk7Xq8" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/MprPLQk7Xq8/mqdefault.jpg" alt="문명특급 236화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">236화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=RQfyyMdw8Ds" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/RQfyyMdw8Ds/mqdefault.jpg" alt="문명특급 239화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">239화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=3SYthj0-d_s" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/3SYthj0-d_s/mqdefault.jpg" alt="문명특급 241화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">241화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=9dB9zw60Z2w" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/9dB9zw60Z2w/mqdefault.jpg" alt="문명특급 242화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name">문명특급 MMTG</div>
+      <div class="episode-title">242화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=OOO6IyRPJq0" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/OOO6IyRPJq0/mqdefault.jpg" alt="문명특급 243화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">243화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="moonmyung" href="https://www.youtube.com/watch?v=OmdHjssZSUE" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/OmdHjssZSUE/mqdefault.jpg" alt="문명특급 244화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/5YIN8GJRvvCO_nZD5VCNkQyE9TSUljQx0Abz7SXzLF4SBWd04bqiXVf7hn50BSh3M6uiZMtgoLY=s88-c-k-c0x00ffffff-no-rj" alt="MMTG">문명특급 MMTG</div>
+      <div class="episode-title">244화</div>
+    </div>
+  </a>
+
+  <!-- ===== 가갸거겨고교 (12 episodes) ===== -->
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=8vfocnl59ME" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/8vfocnl59ME/mqdefault.jpg" alt="가갸거겨고교 20화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">20화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=kzFgNF1TvE0" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/kzFgNF1TvE0/mqdefault.jpg" alt="가갸거겨고교 24화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">24화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=YXaqIKByxKc" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/YXaqIKByxKc/mqdefault.jpg" alt="가갸거겨고교 23화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">23화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=2klyWEGgoBs" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/2klyWEGgoBs/mqdefault.jpg" alt="가갸거겨고교 35화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">35화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=jjWF983yN6Q" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/jjWF983yN6Q/mqdefault.jpg" alt="가갸거겨고교 36화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">36화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=RYww0Q9qA8E" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/RYww0Q9qA8E/mqdefault.jpg" alt="가갸거겨고교 37화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">37화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=v3vXQfkvWvc" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/v3vXQfkvWvc/mqdefault.jpg" alt="가갸거겨고교 38화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">38화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=CmzyWPOcVDk" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/CmzyWPOcVDk/mqdefault.jpg" alt="가갸거겨고교 41화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">41화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=6pJbtVX9j2Y" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/6pJbtVX9j2Y/mqdefault.jpg" alt="가갸거겨고교 47화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">47화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=72rVRc0FE7g" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/72rVRc0FE7g/mqdefault.jpg" alt="가갸거겨고교 52화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">52화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=R8HqwmsgqM8" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/R8HqwmsgqM8/mqdefault.jpg" alt="가갸거겨고교 54화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">54화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="gagya" href="https://www.youtube.com/watch?v=0zJxDNV3XOA" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/0zJxDNV3XOA/mqdefault.jpg" alt="가갸거겨고교 56화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">가갸거겨고교</div>
+      <div class="episode-title">56화</div>
+    </div>
+  </a>
+
+  <!-- ===== 서울리스 (6 episodes) ===== -->
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=ofIc3AYoBVM" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/ofIc3AYoBVM/mqdefault.jpg" alt="서울리스 1화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">1화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=jtRQK0_kI40" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/jtRQK0_kI40/mqdefault.jpg" alt="서울리스 2화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">2화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=KBThjy_OOfU" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/KBThjy_OOfU/mqdefault.jpg" alt="서울리스 3화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">3화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=3V_adJg3Tdo" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/3V_adJg3Tdo/mqdefault.jpg" alt="서울리스 4화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">4화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=NfZu8bRGVoI" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/NfZu8bRGVoI/mqdefault.jpg" alt="서울리스 6화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">6화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=PEj2isQgL4M" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/PEj2isQgL4M/mqdefault.jpg" alt="서울리스 10화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">10화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=orzm56OmCKg" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/orzm56OmCKg/mqdefault.jpg" alt="서울리스 11화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">11화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=gQj0BzWZzZs" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/gQj0BzWZzZs/mqdefault.jpg" alt="서울리스 13화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">13화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="seoul-list" href="https://www.youtube.com/watch?v=xxErMAwTHAI" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/xxErMAwTHAI/mqdefault.jpg" alt="서울리스 14화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">서울리스</div>
+      <div class="episode-title">14화</div>
+    </div>
+  </a>
+
+  <!-- ===== 스브스뉴스 (5 episodes) ===== -->
+  <a class="episode-card fade-in" data-program="sbs-original" href="https://www.youtube.com/watch?v=XGwgeBRwwkI" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/XGwgeBRwwkI/mqdefault.jpg" alt="스브스뉴스 오리지널(1)" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">스브스뉴스 SUBUSU NEWS</div>
+      <div class="episode-title">오리지널(1)</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="sbs-original" href="https://www.youtube.com/watch?v=io3jNKW4UIc" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/io3jNKW4UIc/mqdefault.jpg" alt="스브스뉴스 오리지널(2)" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">스브스뉴스 SUBUSU NEWS</div>
+      <div class="episode-title">오리지널(2)</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="sbs-original" href="https://www.youtube.com/watch?v=tC4VMxLsQ-8" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/tC4VMxLsQ-8/mqdefault.jpg" alt="스브스뉴스 오리지널(3)" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">스브스뉴스 SUBUSU NEWS</div>
+      <div class="episode-title">오리지널(3)</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="sbs-original" href="https://www.youtube.com/watch?v=S8ZJOnCeF14" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/S8ZJOnCeF14/mqdefault.jpg" alt="스브스뉴스 오리지널(4)" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">스브스뉴스 SUBUSU NEWS</div>
+      <div class="episode-title">오리지널(4)</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="sbs-original" href="https://www.youtube.com/watch?v=CkHlk6o4Rps" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/CkHlk6o4Rps/mqdefault.jpg" alt="스브스뉴스 돈높이교육 7편" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">스브스뉴스 SUBUSU NEWS</div>
+      <div class="episode-title">돈높이교육 7편</div>
+    </div>
+  </a>
+
+  <!-- ===== 오목교 전자상가 (2 episodes) ===== -->
+  <a class="episode-card fade-in" data-program="omokgyo" href="https://www.youtube.com/watch?v=jwEQKwblulc" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/jwEQKwblulc/mqdefault.jpg" alt="오목교 전자상가 76화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.googleusercontent.com/ffyVds9XBZ4jZZ-V0JHQxdFSXeaJEiwMWI08udXosApDYAYwmXWiRQaEFDNQLN_r7d57rNp77xY=s88-c-k-c0x00ffffff-no-rj" alt="OMG">오목교 전자상가 OMG</div>
+      <div class="episode-title">76화</div>
+    </div>
+  </a>
+
+  <a class="episode-card fade-in" data-program="omokgyo" href="https://www.youtube.com/watch?v=PUj21XGzaxs" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/PUj21XGzaxs/mqdefault.jpg" alt="오목교 전자상가 81화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.googleusercontent.com/ffyVds9XBZ4jZZ-V0JHQxdFSXeaJEiwMWI08udXosApDYAYwmXWiRQaEFDNQLN_r7d57rNp77xY=s88-c-k-c0x00ffffff-no-rj" alt="OMG">오목교 전자상가 OMG</div>
+      <div class="episode-title">81화</div>
+    </div>
+  </a>
+
+  <!-- ===== 재수서바이벌 (1 episode) ===== -->
+  <a class="episode-card fade-in" data-program="jaesu" href="https://www.youtube.com/watch?v=cBtL5u7P3q4" target="_blank" rel="noopener">
+    <div class="thumb-wrap">
+      <img src="https://img.youtube.com/vi/cBtL5u7P3q4/mqdefault.jpg" alt="재수서바이벌 4-1화" loading="lazy">
+      <div class="play-icon"><i class="fas fa-play"></i></div>
+    </div>
+    <div class="card-body">
+      <div class="program-name"><img class="ch-logo" src="https://yt3.ggpht.com/FU9VlpWi9XWL51ZCv7Swert83uk17EOc43mCtb32Jtrq5LbeasNLKQTowXzgkt2MQGTErJTkvA=s88-c-k-c0x00ffffff-no-rj" alt="SUBUSU">재수서바이벌</div>
+      <div class="episode-title">4-1화</div>
+    </div>
+  </a>
+
+  <!-- No results message -->
+  <div class="no-results">
+    <i class="fas fa-search" style="font-size:1.5rem;margin-bottom:12px;display:block;opacity:0.5"></i>
+    해당 프로그램의 에피소드가 없습니다.
+  </div>
+
+</div>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/shinyoungah" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/@SUBUSUNEWS" target="_blank" rel="noopener" aria-label="SUBUSU NEWS YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2026 Younga Shin. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Dark Mode Toggle ===== */
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  const icon = themeToggle.querySelector('i');
+  icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+setTheme(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+/* ===== Filter Tabs ===== */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.episode-card');
+const noResults = document.querySelector('.no-results');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.getAttribute('data-filter');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-program') === filter) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  });
+});
+
+/* ===== Fade-in on Scroll ===== */
+const fadeEls = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 60);
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.08,
+  rootMargin: '0px 0px -40px 0px'
+});
+
+fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

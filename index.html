@@ -772,24 +772,15 @@ section {
   color: var(--text-primary);
 }
 
-.view-all-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 28px;
-  padding: 12px 28px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.2s;
+.view-all-link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-left: auto;
+  white-space: nowrap;
 }
-.view-all-btn:hover {
-  background: var(--accent-hover);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--shadow-md);
+.view-all-link:hover {
+  color: var(--accent-hover);
 }
 
 /* ===== Filmography ===== */
@@ -1174,7 +1165,7 @@ footer {
         <div class="timeline-org"><span data-ko="프리랜서 연출부" data-en="Freelance Production Crew">프리랜서 연출부</span></div>
         <div class="timeline-role"><span data-ko="연출부" data-en="Production Crew">연출부</span></div>
         <div class="timeline-detail">
-          <a href="https://class101.net/ko/products/5f1c1133052090001cdf3172" target="_blank"><span data-ko="CLASS101 드로마 메리메이드" data-en="CLASS101 Droma Merimade">CLASS101 드로마 메리메이드</span> <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a><br>
+          <a href="https://class101.net/ko/products/5f1c1133052090001cdf3172" target="_blank"><span data-ko="CLASS101 강의 영상 (드로마 메리메이드)" data-en="CLASS101 Lecture Video (Droma Merimade)">CLASS101 강의 영상 (드로마 메리메이드)</span> <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a><br>
           <a href="https://youtu.be/8NwgJZIULBo" target="_blank"><span data-ko="카카오미니 바이럴 광고" data-en="Kakao Mini Viral Ad">카카오미니 바이럴 광고</span> <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a><br>
           <a href="https://vimeo.com/489244278" target="_blank">Fendi Renaissance - Anima Mundi: Seoul <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i></a>
         </div>
@@ -1352,7 +1343,7 @@ footer {
     <h2 class="section-title fade-in">Film &amp; Media</h2>
     <div class="section-divider fade-in"></div>
 
-    <div class="exp-group-title fade-in"><i class="fas fa-tv"></i> SBS Productions</div>
+    <div class="exp-group-title fade-in"><i class="fas fa-tv"></i> SBS Productions <a href="sbs.html" class="view-all-link">View All &rarr;</a></div>
     <p class="section-subtitle fade-in"><span data-ko="7개 프로그램 · 50+ 에피소드 서브촬영" data-en="7 Programs · 50+ Episodes as Sub-Camera Director">7개 프로그램 · 50+ 에피소드 서브촬영</span></p>
     <div class="section-divider fade-in"></div>
 
@@ -1361,7 +1352,7 @@ footer {
       <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=fjJ6V0UIFDY','_blank')">
         <img class="sbs-thumb" src="https://img.youtube.com/vi/fjJ6V0UIFDY/mqdefault.jpg" alt="문명특급" loading="lazy">
         <div class="sbs-info">
-          <div class="sbs-program"><span data-ko="문명특급" data-en="MMTG">문명특급</span> (MMTG)</div>
+          <div class="sbs-program"><span data-ko="문명특급" data-en="MMTG (문명특급)">문명특급</span></div>
           <div class="sbs-ep-title"><span data-ko="대중문화 트렌드를 재미있게 파헤치는 SBS 디지털 예능" data-en="SBS digital entertainment exploring pop culture trends">대중문화 트렌드를 재미있게 파헤치는 SBS 디지털 예능</span></div>
         </div>
       </div>
@@ -1369,7 +1360,7 @@ footer {
       <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=8vfocnl59ME','_blank')">
         <img class="sbs-thumb" src="https://img.youtube.com/vi/8vfocnl59ME/mqdefault.jpg" alt="가갸거겨고교" loading="lazy">
         <div class="sbs-info">
-          <div class="sbs-program"><span data-ko="가갸거겨고교" data-en="가갸거겨고교">가갸거겨고교</span></div>
+          <div class="sbs-program"><span data-ko="가갸거겨고교" data-en="Gagya Geogyo">가갸거겨고교</span></div>
           <div class="sbs-ep-title"><span data-ko="전국 대학 캠퍼스를 탐방하는 캠퍼스 투어 콘텐츠" data-en="Campus tour content exploring universities across Korea">전국 대학 캠퍼스를 탐방하는 캠퍼스 투어 콘텐츠</span></div>
         </div>
       </div>
@@ -1385,7 +1376,7 @@ footer {
       <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=XGwgeBRwwkI','_blank')">
         <img class="sbs-thumb" src="https://img.youtube.com/vi/XGwgeBRwwkI/mqdefault.jpg" alt="스브스뉴스" loading="lazy">
         <div class="sbs-info">
-          <div class="sbs-program"><span data-ko="스브스뉴스" data-en="SUBUSU NEWS">스브스뉴스</span> (SUBUSU NEWS)</div>
+          <div class="sbs-program"><span data-ko="스브스뉴스" data-en="SUBUSU NEWS">스브스뉴스</span></div>
           <div class="sbs-ep-title"><span data-ko="MZ세대를 위한 SBS 디지털 뉴스 콘텐츠" data-en="SBS digital news content for Gen MZ">MZ세대를 위한 SBS 디지털 뉴스 콘텐츠</span></div>
         </div>
       </div>
@@ -1393,7 +1384,7 @@ footer {
       <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=jwEQKwblulc','_blank')">
         <img class="sbs-thumb" src="https://img.youtube.com/vi/jwEQKwblulc/mqdefault.jpg" alt="오목교 전자상가" loading="lazy">
         <div class="sbs-info">
-          <div class="sbs-program"><span data-ko="오목교 전자상가" data-en="OMG ELECTRONICS">오목교 전자상가</span> (OMG)</div>
+          <div class="sbs-program"><span data-ko="오목교 전자상가" data-en="OMG ELECTRONICS">오목교 전자상가</span></div>
           <div class="sbs-ep-title"><span data-ko="IT·테크 제품을 리뷰하고 소개하는 테크 콘텐츠" data-en="Tech content reviewing and introducing IT products">IT·테크 제품을 리뷰하고 소개하는 테크 콘텐츠</span></div>
         </div>
       </div>
@@ -1401,21 +1392,18 @@ footer {
       <div class="sbs-card" onclick="window.open('https://youtube.com/watch?v=cBtL5u7P3q4','_blank')">
         <img class="sbs-thumb" src="https://img.youtube.com/vi/cBtL5u7P3q4/mqdefault.jpg" alt="재수서바이벌" loading="lazy">
         <div class="sbs-info">
-          <div class="sbs-program"><span data-ko="재수서바이벌" data-en="재수서바이벌">재수서바이벌</span></div>
+          <div class="sbs-program"><span data-ko="재수서바이벌" data-en="Jaesu Survival">재수서바이벌</span></div>
           <div class="sbs-ep-title"><span data-ko="재수생들의 도전과 성장을 담은 리얼 다큐 콘텐츠" data-en="Real documentary content about gap-year students' challenges and growth">재수생들의 도전과 성장을 담은 리얼 다큐 콘텐츠</span></div>
         </div>
       </div>
     </div>
 
-    <div style="text-align:center;" class="fade-in">
-      <a href="sbs.html" class="view-all-btn"><span data-ko="전체 보기" data-en="View All">전체 보기</span> &rarr;</a>
-    </div>
-    <div class="exp-group-title fade-in" style="margin-top:48px;"><i class="fas fa-film"></i> Filmography</div>
+    <div class="exp-group-title fade-in" style="margin-top:48px;"><i class="fas fa-film"></i> Filmography <a href="films.html" class="view-all-link">View All &rarr;</a></div>
 
     <div class="film-showcase fade-in">
 
       <!-- 1. 해남배추 -->
-      <div class="film-card">
+      <div class="film-card" onclick="window.open('https://vimeo.com/1058818345?fl=pl&fe=sh','_blank')" style="cursor:pointer;">
         <img class="film-card-img" src="images/Haenam_Low_002.jpg" alt="해남배추 스틸컷">
         <div class="film-card-body">
           <div class="film-card-meta">
@@ -1435,7 +1423,7 @@ footer {
       </div>
 
       <!-- 2. 갑자기 분위기 스파시바 -->
-      <div class="film-card">
+      <div class="film-card" onclick="window.open('https://vimeo.com/1009516569?fl=pl&fe=sh','_blank')" style="cursor:pointer;">
         <img class="film-card-img" src="images/GAB still1.png" alt="Suddenly, Home 스틸컷">
         <div class="film-card-body">
           <div class="film-card-meta">
@@ -1455,7 +1443,7 @@ footer {
       </div>
 
       <!-- 3. Fendi Renaissance -->
-      <div class="film-card">
+      <div class="film-card" onclick="window.open('https://vimeo.com/489244278','_blank')" style="cursor:pointer;">
         <img class="film-card-img" src="images/1632394499-1607664598262983-fendi-anima-mundi-korea02jung-eun-kang.webp" alt="Fendi Renaissance 스틸컷">
         <div class="film-card-body">
           <div class="film-card-meta">
@@ -1464,14 +1452,11 @@ footer {
           </div>
           <div class="film-title">Fendi Renaissance - Anima Mundi: Seoul</div>
           <div class="film-role"><span data-ko="연출부" data-en="Production Crew">연출부</span></div>
-          <div class="film-festivals">
-            <span class="festival-badge"><a href="https://vimeo.com/489244278" target="_blank"><i class="fas fa-play-circle"></i> Watch</a></span>
-          </div>
         </div>
       </div>
 
       <!-- 4. 학교탈출 (배리어프리) -->
-      <div class="film-card">
+      <div class="film-card" onclick="window.open('https://youtu.be/hcUzDc-gZUc','_blank')" style="cursor:pointer;">
         <img class="film-card-img" src="images/스크린샷 2026-03-30 오전 2.38.56.png" alt="학교탈출 스틸컷">
         <div class="film-card-body">
           <div class="film-card-meta">
@@ -1481,8 +1466,7 @@ footer {
           <div class="film-title"><span data-ko="학교탈출" data-en="School Escape">학교탈출</span></div>
           <div class="film-role"><span data-ko="제작" data-en="Production">제작</span></div>
           <div class="film-festivals">
-            <span class="festival-badge"><span data-ko="고양시청소년진로센터 이루어DREAM 프로젝트" data-en="Goyang Youth Career Center irueo DREAM Project — Barrier-Free Short Film">고양시청소년진로센터 이루어DREAM 프로젝트</span></span>
-            <span class="festival-badge"><a href="https://youtu.be/hcUzDc-gZUc" target="_blank"><i class="fas fa-play-circle"></i> Watch</a></span>
+            <span class="festival-badge"><span data-ko="고양시청소년진로센터 이루어DREAM 프로젝트" data-en="Goyang Youth Career Center irueo DREAM Project">고양시청소년진로센터 이루어DREAM 프로젝트</span></span>
           </div>
         </div>
       </div>
@@ -1493,9 +1477,6 @@ footer {
       <span data-ko="외 30편 이상 단편영화·광고·배리어프리 제작 참여" data-en="30+ additional short film, commercial & barrier-free credits">외 30편 이상 단편영화·광고·배리어프리 제작 참여</span>
     </div>
 
-    <div style="text-align:center;" class="fade-in">
-      <a href="films.html" class="view-all-btn"><span data-ko="전체 보기" data-en="View All">전체 보기</span> &rarr;</a>
-    </div>
   </div>
 </section>
 
